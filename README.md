@@ -1,4 +1,3 @@
-# Replication Project Template
+# PSYC201A Replication Project
 
-This is a GitHub template to use for replications projects in PSYCH 201a at UCSD. Create a new repo using this as a template in order to use it.
-
+This is a copy of the GitHub template to use for replications projects in PSYCH 201a at UCSD. New repo is created using this template under the name Jung2025.

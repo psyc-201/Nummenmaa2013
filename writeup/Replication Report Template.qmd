@@ -1,6 +1,6 @@
 ---
-title: "Replication of Study X by Sample & Sample (20xx, Psychological Science)"
-author: "Replication Author[s] (contact information)"
+title: "Replication of Experiment by Nummenmaa et al. (2014, PNAS)"
+author: "Yoonwon Jung (y5jung@ucsd.edu)"
 date: "`r format(Sys.time(), '%B %d, %Y')`"
 format:
   html:
@@ -12,7 +12,21 @@ format:
 
 ## Introduction
 
-[No abstract is needed.]  Each replication project will have a straightforward, no frills report of the study and results.  These reports will be publicly available as supplementary material for the aggregate report(s) of the project as a whole.  Also, to maximize project integrity, the intro and methods will be written and critiqued in advance of data collection.  Introductions can be just 1-2 paragraphs clarifying the main idea of the original study, the target finding for replication, and any other essential information. You will likely contact the authors of the original study, so this should be professional and forward facing. It will NOT have a literature review -- that is in the original publication. You can write both the introduction and the methods in past tense.  
+Emotion is an embodied experience, involving interaction between mind and body (Barrett & Lindquist, 2008; Damasio & Carvalho, 2013). While contemporary models of emotion agree on the mind-body interaction, they diverge in whether the bodily changes associated with emotions follow a universal pattern (Barrett et al., 2006; Kreibig, 2010; Volynets et al., 2020). A series of research explored universality of how people associate different emotions with bodily sensations across 15 countries (Nummenmaa et al., 2014; Volynets et al., 2020). In particular, for the replication project, I focus on the experiment 1 from Nummenmaa et al. (2014), where they conducted a series of comparison between two different cultural groups - Finnish-Swedish and Finnish-Taiwanese. This which makes the replication feasible within the short time frame than comparison cross 15 countries conducted in Volynets et al. (2020). 
+
+Among the two pairs of cultural comparison, I plan to conceptually replicate the contrast between Finnish-Taiwanese, since these groups differ more substantially in both cultural and linguistic distance than Finnish-Swedish. However, recruiting Finnish and Taiwanese participants is challenging, and our research team lacks sufficient language proficiency to interpret responses from these groups with confidence. To address this, I propose to concpetually replicate the study using two culturally distant populations that are more accessible: native English-speaking Americans and Koreans.
+
+The original experiment included two independent variables - the type of emotion words (basic vs nonbasic; measured within-subejct), and the culture group (Finnish vs Taiwanese; measured between-subject). To measure the embodied representation of emotion, Bodily Sensation Maps (BSM) will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. 13 emotion words will be tested: six basic (anger, fear, disgust, happiness, sadness, and surprise) and seven nonbasic emotions (anxiety, love, depression, contempt, pride, shame, and envy) as well as a neutral state. Our lab has already implemented and hosted a web-based version of the BSM measure, which will be used in the study. 
+
+One anticipated challenge in running this experiment on Prolific is accurately identifying participants’ cultural backgrounds. Especially for Korean speakers recruited through prolific, it is highly likely that they are as equally proficient in English or more familiar to Western cultural context. To mitigate this, I plan to attach the language background survey at the end, in addition to the BSM task, so that we could accurately identify the target culture group.
+
+The link to the repository is https://github.com/yoonwonj/Jung2025, and to the original paper is https://github.com/yoonwonj/Jung2025/tree/main/original_paper. 
+
+## Reference
+- Barrett, L. F., & Lindquist, K. A. (2008). The embodiment of emotion. Embodied grounding: Social, cognitive, affective, and neuroscientific approaches, 237-262.
+- Damasio, A., & Carvalho, G. B. (2013). The nature of feelings: evolutionary and neurobiological origins. Nature Reviews Neuroscience, 14(2), 143-152.
+- Nummenmaa, L., Glerean, E., Hari, R., & Hietanen, J. K. (2014). Bodily maps of emotions. Proceedings of the National Academy of Sciences, 111(2), 646-651.
+- Volynets, S., Glerean, E., Hietanen, J. K., Hari, R., & Nummenmaa, L. (2020). Bodily maps of emotions are culturally universal. Emotion, 20(7), 1127.
 
 
 ## Methods
