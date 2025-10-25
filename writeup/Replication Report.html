@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.5.57">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Yoonwon Jung (y5jung@ucsd.edu)">
+<meta name="dcterms.date" content="2025-10-24">
+
+<title>Replication of Experiment by Nummenmaa et al.&nbsp;(2014, PNAS)</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="Replication Report_files/libs/clipboard/clipboard.min.js"></script>
+<script src="Replication Report_files/libs/quarto-html/quarto.js"></script>
+<script src="Replication Report_files/libs/quarto-html/popper.min.js"></script>
+<script src="Replication Report_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="Replication Report_files/libs/quarto-html/anchor.min.js"></script>
+<link href="Replication Report_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="Replication Report_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="Replication Report_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="Replication Report_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="Replication Report_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+  <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#reliability-and-validity" id="toc-reliability-and-validity" class="nav-link" data-scroll-target="#reliability-and-validity">Reliability and Validity</a></li>
+  <li><a href="#planned-sample" id="toc-planned-sample" class="nav-link" data-scroll-target="#planned-sample">Planned Sample</a></li>
+  <li><a href="#materials" id="toc-materials" class="nav-link" data-scroll-target="#materials">Materials</a></li>
+  <li><a href="#procedure" id="toc-procedure" class="nav-link" data-scroll-target="#procedure">Procedure</a></li>
+  <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis Plan</a></li>
+  <li><a href="#differences-from-original-study" id="toc-differences-from-original-study" class="nav-link" data-scroll-target="#differences-from-original-study">Differences from Original Study</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#data-preparation" id="toc-data-preparation" class="nav-link" data-scroll-target="#data-preparation">Data preparation</a></li>
+  <li><a href="#confirmatory-analysis" id="toc-confirmatory-analysis" class="nav-link" data-scroll-target="#confirmatory-analysis">Confirmatory analysis</a></li>
+  </ul></li>
+  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  </ul>
+</nav>
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Replication of Experiment by Nummenmaa et al.&nbsp;(2014, PNAS)</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yoonwon Jung (y5jung@ucsd.edu) </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">October 24, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+<p>The link to the repository is <a href="https://github.com/yoonwonj/Jung2025">here</a>, and to the original paper is <a href="https://github.com/yoonwonj/Jung2025/tree/main/original_paper">here</a>.</p>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Emotion is an embodied experience, involving interaction between mind and body (Barrett &amp; Lindquist, 2008; Damasio &amp; Carvalho, 2013). While contemporary models of emotion agree on the mind-body interaction, they diverge in whether the bodily changes associated with emotions follow a universal pattern (Barrett et al., 2006; Kreibig, 2010; Volynets et al., 2020). A series of research explored universality of how people associate different emotions with bodily sensations across 15 countries (Nummenmaa et al., 2014; Volynets et al., 2020). In particular, for the replication project, I focus on the experiment 1c from Nummenmaa et al.&nbsp;(2014), where they conducted a comparison between two different cultural groups - Finnish-Taiwanese (N=38). This which makes the replication feasible within the short time frame than comparison cross 15 countries conducted in Volynets et al.&nbsp;(2020). These groups differ more substantially in both cultural and linguistic distance than the two groups in experiment 1b (Finnish-Swedish.) However, recruiting Finnish and Taiwanese participants is challenging, and our research team lacks sufficient language proficiency to interpret responses from these groups with confidence. To address this, I propose to conceptually replicate the study using two culturally distant populations that are more accessible: native English-speaking Americans and Koreans.</p>
+<p>Nummenmaa et al.&nbsp;(2014) included two independent variables - the type of emotion words (basic vs nonbasic; measured within-subject), and the culture group (Finnish vs Taiwanese; measured between-subject). For experiment 1c, I plan to focus on the second variable, the culture group differences. Specifically, I aim to replicate whether the Spearman correlation between embodied emotion representation of two participants from different cultures are larger within the basic emotion categories (matched condition; anger-Finnish vs anger-Taiwanese) than that of between-category (mismatched condition; anger-Finnish vs happiness-Taiwanese). Moreover, Whether the effect size of the difference between the two conditions will also be tested (mean spearman correlation 0.70 vs 0.40). The effect size between the two conditions and the variability measures are not reported in the study. I have emailed the authors to share the data for experiment 1c to estimate the effect size and the variability, as well as access their exact analyses scheme.</p>
+<p>To measure the embodied representation of emotion, “Bodily Sensation Maps (BSM)” will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. Six basic (anger, fear, disgust, happiness, sadness, and surprise) emotions, as well as a neutral state, will be presented. Our lab has already implemented and hosted a web-based version of the BSM measure, using the code provided in their repository (<a href="https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads">link</a>). I will modify the code to create two versions of the experiment (one for the Korean speaking participants, and one for English speaking participants), as experiment 1c also translated their materials into the respective languages that each cultural group speaks. Everything else will be the exact same with the original experiment, including the brush size, and the exact red and blue colors for indicating activation and deactivation, and the randomization of word orders.</p>
+<p>One anticipated challenge in running this experiment on Prolific is accurately identifying participants’ cultural backgrounds. Especially for Korean speakers recruited through prolific, it is highly likely that they are as equally proficient in English or more familiar to Western cultural context. To mitigate this, I plan to attach the language background survey at the end, in addition to the BSM task, so that we could accurately identify the target culture group.</p>
+<!--
+It is expected for Korean participants recruited from prolific to also have some English exposure or regular usage of English in their everyday lives. If some additional analyses beyond what's originally done in experiment 1c is feasible to do, for example, comparing the within-category variation within a culture group (correlation of anger-Korean and anger-Korean) and outside culture groups (correlation of anger-Korean and anger-English), it could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al. (2014).
+-->
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="reliability-and-validity" class="level3">
+<h3 class="anchored" data-anchor-id="reliability-and-validity">Reliability and Validity</h3>
+<p>The experiment that I plan to replicate (experiment 1c) did not report any reliability or validity related measures. However, experiment 1b and experiment 1c were attemps to measure whether the trend observed in experiment 1 generalizes to other cultures, especially for the basic emotions. Therefore, the experiment 1c itself is an attempt to check the external validity.</p>
+<!--
+### Power Analysis
+
+Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
+-->
+</section>
+<section id="planned-sample" class="level3">
+<h3 class="anchored" data-anchor-id="planned-sample">Planned Sample</h3>
+<p>Following the sample size in Nummenmaa et al.&nbsp;(2014), 36 participants will be collected, with 18 participants in each cultural group (United States, Korea.) To recruit two separate culture group, I would have to create two separate prolific studies. To filter Korean participants, I will apply First Language-Korean, Primary Language-Korean, and Nationality-Korean filters, which provides 107 participants. To filter native English speakers from USA, I will apply Primary Language-English, First Language-English, and Nationality-United States, which provides 50,261 matching participants. Although there are only a small number of eligible Korean participants, recruiting 19 participants is practically feasible, based on my previous experience of recruiting Korean speakers in prolific.</p>
+<p>Since the estimated completion time is around 10 minutes, the compensation will be 1/6 of the minimum California hourly wage registered in IRB. For example, if the IRB is based on 2025 hourly rage of California ($16.50/hour), each participant will be paid $2.75.</p>
+</section>
+<section id="materials" class="level3">
+<h3 class="anchored" data-anchor-id="materials">Materials</h3>
+<p>To measure the embodied representation of emotion, “Bodily Sensation Maps (BSM)” will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. Six basic (anger, fear, disgust, happiness, sadness, and surprise) emotions, as well as a neutral state, will be presented. Our lab has already implemented and hosted a web-based version of the BSM measure, using the code provided in their repository (<a href="https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads">link</a>). I will modify the code to create two versions of the experiment (one for the Korean speaking participants, and one for English speaking participants), as experiment 1c also translated their materials into the respective languages that each cultural group speaks. Everything else will be the exact same with the original experiment, including the brush size, and the exact red and blue colors for indicating activation and deactivation, and the randomization of word orders.</p>
+<p>In addition to the “Bodily Sensation Maps (BSM)” measure, language background survey will be attached at the end to accurately identify the target culture group. For assessing the language background, subscales from the Language Experience and Proficiency Questionnaire (LEAP-Q, Marian et al., 2007) will be used. The 23 items include the number of languages the participants speak, the order of acquisition and dominance of each languages they can speak, self-rated proficiency, and the context of usage of the listed languages.</p>
+</section>
+<section id="procedure" class="level3">
+<h3 class="anchored" data-anchor-id="procedure">Procedure</h3>
+<p>Participants will be presented with two silhouettes of bodies alongside one of the seven emotion words (six basic emotions or neutral), and will be “asked to color the bodily regions whose activity they felt to be increased or decreased during viewing of each stimulus”. Then, they will fill out the language background survey.</p>
+</section>
+<section id="analysis-plan" class="level3">
+<h3 class="anchored" data-anchor-id="analysis-plan">Analysis Plan</h3>
+<p>The resulting data from “Bodily Sensation Maps (BSM)” measure will be “stored in matrices where the paint intensity ranged from 0 to 100” in each location. As a result, data from both bodies (the left body indicating activation, the right body indicating deactivation) consists of 50,364 pixels.</p>
+<p>For data inspection, data will be “screened manually for anomalous painting behavior (e.g., drawing symbols on bodies or scribbling randomly). Moreover, participants leaving more than mean + 2.5 SDs of bodies untouched” will be removed. Next, participants’ activation and deactivation data for each emotion will be “combined into single BSMs representing both activations and deactivations and responses outside the body area were masked.”</p>
+<p>Based on this combined BSMs, mass univariate t tests will be performed “on the subjectwise BSMs to compare pixelwise activations and deactivations of the BSMs for each emotional state against zero.” This will result in “statistical t-maps where pixel intensities reflect statistically significant experienced bodily changes associated with each emotional state.” False discovery rate (FDR) correction (alpha level= 0.05) will be applied to correct for multiple comparison.</p>
+<p>To compute the correlation between the BSM measures of different emotions, pairwise similarity of different emotion pairs will be calculated using Spearman correlation. Zero values in the heatmaps (i.e., regions without paint) will be filled with Gaussian noise to avoid inflated correlations. “The Spearman correlation was chosen as the optimal similarity metric due to the high dimensionality of the data within each map.” Then, based on the all possible pairs between emotions, similarity matrix per each participant will be calculated, on which the group similarity matrix will be calculated by averaging individual similarity matrices. Based on these measures, the correlation score within the culture group and between the culture group will be calculated.</p>
+</section>
+<section id="differences-from-original-study" class="level3">
+<h3 class="anchored" data-anchor-id="differences-from-original-study">Differences from Original Study</h3>
+<p>In this conceptual replication, I plan to recruit Korean participants and native English speakers from USA, due to the challenge in recruiting Finnish and Taiwanese participants through prolific, and our research team lacking sufficient language proficiency to interpret responses from these groups with confidence. It is highly likely that the Korean participants recruited through prolific are as equally proficient in English or more familiar to Western cultural context. This could serve as a potential covariate, which I plan to capture using the language background survey. It could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al.&nbsp;(2014).</p>
+<!--
+### Methods Addendum (Post Data Collection)
+
+You can comment this section out prior to final report with data collection.
+
+
+#### Actual Sample
+  Sample size, demographics, data exclusions based on rules spelled out in analysis plan
+
+#### Differences from pre-data collection methods plan
+  Any differences from what was described as the original plan, or “none”.
+-->
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="data-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="data-preparation">Data preparation</h3>
+<p>Data preparation will follow the procedure described in the ‘Analysis plan’ section. Matlab code provided by the authors of the papers (in this <a href="https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/matlab?ref_type=heads%5D">link</a>) will be imported to follow the exact procedure used from the paper. The code provided involves preprocessing the raw BSM data into the construction of statistical t-maps with corrections for multiple comparison.</p>
+<!--
+    
+
+
+
+
+
+
+-->
+</section>
+<section id="confirmatory-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="confirmatory-analysis">Confirmatory analysis</h3>
+<p>Confirmatory analysis will follow the procedure described in the ‘Analysis plan’ section. Using the preprocessed file as a result of running the matlab code specified above, the resulting .mat file will be directly imported to python for the confirmatory analysis, which is comparing the aggregated Spearman correlation within and between the culture groups.</p>
+<!--
+*Side-by-side graph with original graph is ideal here*
+
+### Exploratory analyses
+
+Any follow-up analyses desired (not required).  
+-->
+</section>
+</section>
+<section id="reference" class="level2">
+<h2 class="anchored" data-anchor-id="reference">Reference</h2>
+<ul>
+<li>Barrett, L. F., &amp; Lindquist, K. A. (2008). The embodiment of emotion. Embodied grounding: Social, cognitive, affective, and neuroscientific approaches, 237-262.</li>
+<li>Damasio, A., &amp; Carvalho, G. B. (2013). The nature of feelings: evolutionary and neurobiological origins. Nature Reviews Neuroscience, 14(2), 143-152.</li>
+<li>Marian, V., Blumenfeld, H. K., &amp; Kaushanskaya, M. (2007). The Language Experience and Proficiency Questionnaire (LEAP-Q): Assessing Language Profiles in Bilinguals and Multilinguals. Journal of Speech, Language, and Hearing Research, 50(4), 940–967. https://doi.org/10.1044/1092-4388(2007/067)</li>
+<li>Nummenmaa, L., Glerean, E., Hari, R., &amp; Hietanen, J. K. (2014). Bodily maps of emotions. Proceedings of the National Academy of Sciences, 111(2), 646-651.</li>
+<li>Volynets, S., Glerean, E., Hietanen, J. K., Hari, R., &amp; Nummenmaa, L. (2020). Bodily maps of emotions are culturally universal. Emotion, 20(7), 1127.</li>
+</ul>
+<!--
+
+## Discussion
+
+### Summary of Replication Attempt
+
+Open the discussion section with a paragraph summarizing the primary result from the confirmatory analysis and the assessment of whether it replicated, partially replicated, or failed to replicate the original result.  
+
+### Commentary
+
+Add open-ended commentary (if any) reflecting (a) insights from follow-up exploratory analysis, (b) assessment of the meaning of the replication (or not) - e.g., for a failure to replicate, are the differences between original and present study ones that definitely, plausibly, or are unlikely to have been moderators of the result, and (c) discussion of any objections or challenges raised by the current and original authors about the replication attempt.  None of these need to be long.
+-->
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

@@ -10,70 +10,84 @@ format:
 
 <!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
 
+The link to the repository is [here](https://github.com/yoonwonj/Jung2025), and to the original paper is [here](https://github.com/yoonwonj/Jung2025/tree/main/original_paper). 
+
 ## Introduction
 
 Emotion is an embodied experience, involving interaction between mind and body (Barrett & Lindquist, 2008; Damasio & Carvalho, 2013). While contemporary models of emotion agree on the mind-body interaction, they diverge in whether the bodily changes associated with emotions follow a universal pattern (Barrett et al., 2006; Kreibig, 2010; Volynets et al., 2020). A series of research explored universality of how people associate different emotions with bodily sensations across 15 countries (Nummenmaa et al., 2014; Volynets et al., 2020). In particular, for the replication project, I focus on the experiment 1c from Nummenmaa et al. (2014), where they conducted a comparison between two different cultural groups - Finnish-Taiwanese (N=38). This which makes the replication feasible within the short time frame than comparison cross 15 countries conducted in Volynets et al. (2020). These groups differ more substantially in both cultural and linguistic distance than the two groups in experiment 1b (Finnish-Swedish.) However, recruiting Finnish and Taiwanese participants is challenging, and our research team lacks sufficient language proficiency to interpret responses from these groups with confidence. To address this, I propose to conceptually replicate the study using two culturally distant populations that are more accessible: native English-speaking Americans and Koreans. 
 
 Nummenmaa et al. (2014) included two independent variables - the type of emotion words (basic vs nonbasic; measured within-subject), and the culture group (Finnish vs Taiwanese; measured between-subject). For experiment 1c, I plan to focus on the second variable, the culture group differences. Specifically, I aim to replicate whether the Spearman correlation between embodied emotion representation of two participants from different cultures are larger within the basic emotion categories (matched condition; anger-Finnish vs anger-Taiwanese) than that of between-category (mismatched condition; anger-Finnish vs happiness-Taiwanese). Moreover, Whether the effect size of the difference between the two conditions will also be tested (mean spearman correlation 0.70 vs 0.40). The effect size between the two conditions and the variability measures are not reported in the study. I have emailed the authors to share the data for experiment 1c to estimate the effect size and the variability, as well as access their exact analyses scheme. 
 
-To measure the embodied representation of emotion, Bodily Sensation Maps (BSM) will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. Six basic (anger, fear, disgust, happiness, sadness, and surprise) emotions, as well as a neutral state, will be presented. Our lab has already implemented and hosted a web-based version of the BSM measure, using the code provided in their repository ([link](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads)). I will modify the code to create two versions of the experiment (one for the Korean speaking participants, and one for English speaking participants), as experiment 1c also translated their materials into the respective languages that each cultural group speaks. Everything else will be the exact same with the original experiment, including the brush size, and the exact red and blue colors for indicating activation and deactivation, and the randomization of word orders.
+To measure the embodied representation of emotion, "Bodily Sensation Maps (BSM)" will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. Six basic (anger, fear, disgust, happiness, sadness, and surprise) emotions, as well as a neutral state, will be presented. Our lab has already implemented and hosted a web-based version of the BSM measure, using the code provided in their repository ([link](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads)). I will modify the code to create two versions of the experiment (one for the Korean speaking participants, and one for English speaking participants), as experiment 1c also translated their materials into the respective languages that each cultural group speaks. Everything else will be the exact same with the original experiment, including the brush size, and the exact red and blue colors for indicating activation and deactivation, and the randomization of word orders.
 
-One anticipated challenge in running this experiment on Prolific is accurately identifying participants’ cultural backgrounds. Especially for Korean speakers recruited through prolific, it is highly likely that they are as equally proficient in English or more familiar to Western cultural context. To mitigate this, I plan to attach the language background survey at the end, in addition to the BSM task, so that we could accurately identify the target culture group. It is expected for Korean participants recruited from prolific to also have some English exposure or regular usage of English in their everyday lives. If some additional analyses beyond what's originally done in experiment 1c is feasible to do, for example, comparing the within-category variation within a culture group (correlation of anger-Korean and anger-Korean) and outside culture groups (correlation of anger-Korean and anger-English), it could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al. (2014).
-
-The link to the repository is [here](https://github.com/yoonwonj/Jung2025), and to the original paper is [here](https://github.com/yoonwonj/Jung2025/tree/main/original_paper). 
-
-## Reference
-- Barrett, L. F., & Lindquist, K. A. (2008). The embodiment of emotion. Embodied grounding: Social, cognitive, affective, and neuroscientific approaches, 237-262.
-- Damasio, A., & Carvalho, G. B. (2013). The nature of feelings: evolutionary and neurobiological origins. Nature Reviews Neuroscience, 14(2), 143-152.
-- Nummenmaa, L., Glerean, E., Hari, R., & Hietanen, J. K. (2014). Bodily maps of emotions. Proceedings of the National Academy of Sciences, 111(2), 646-651.
-- Volynets, S., Glerean, E., Hietanen, J. K., Hari, R., & Nummenmaa, L. (2020). Bodily maps of emotions are culturally universal. Emotion, 20(7), 1127.
+One anticipated challenge in running this experiment on Prolific is accurately identifying participants’ cultural backgrounds. Especially for Korean speakers recruited through prolific, it is highly likely that they are as equally proficient in English or more familiar to Western cultural context. To mitigate this, I plan to attach the language background survey at the end, in addition to the BSM task, so that we could accurately identify the target culture group. 
 
 <!--
+It is expected for Korean participants recruited from prolific to also have some English exposure or regular usage of English in their everyday lives. If some additional analyses beyond what's originally done in experiment 1c is feasible to do, for example, comparing the within-category variation within a culture group (correlation of anger-Korean and anger-Korean) and outside culture groups (correlation of anger-Korean and anger-English), it could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al. (2014).
+-->
+
 ## Methods
 
+### Reliability and Validity
+The experiment that I plan to replicate (experiment 1c) did not report any reliability or validity related measures. However, experiment 1b and experiment 1c were attemps to measure whether the trend observed in experiment 1 generalizes to other cultures, especially for the basic emotions. Therefore, the experiment 1c itself is an attempt to check the external validity.
+
+<!--
 ### Power Analysis
 
 Original effect size, power analysis for samples to achieve 80%, 90%, 95% power to detect that effect size.  Considerations of feasibility for selecting planned sample size.
+-->
 
 ### Planned Sample
 
-Planned sample size and/or termination rule, sampling frame, known demographics if any, preselection rules if any.
+Following the sample size in Nummenmaa et al. (2014), 36 participants will be collected, with 18 participants in each cultural group (United States, Korea.) To recruit two separate culture group, I would have to create two separate prolific studies. To filter Korean participants, I will apply First Language-Korean, Primary Language-Korean, and Nationality-Korean filters, which provides 107 participants. To filter native English speakers from USA, I will apply Primary Language-English, First Language-English, and Nationality-United States, which provides 50,261 matching participants. Although there are only a small number of eligible Korean participants, recruiting 19 participants is practically feasible, based on my previous experience of recruiting Korean speakers in prolific.
+
+Since the estimated completion time is around 10 minutes, the compensation will be 1/6 of the minimum California hourly wage registered in IRB. For example, if the IRB is based on 2025 hourly rage of California ($16.50/hour), each participant will be paid \$2.75.
 
 ### Materials
 
-All materials - can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+To measure the embodied representation of emotion, "Bodily Sensation Maps (BSM)" will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. Six basic (anger, fear, disgust, happiness, sadness, and surprise) emotions, as well as a neutral state, will be presented. Our lab has already implemented and hosted a web-based version of the BSM measure, using the code provided in their repository ([link](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads)). I will modify the code to create two versions of the experiment (one for the Korean speaking participants, and one for English speaking participants), as experiment 1c also translated their materials into the respective languages that each cultural group speaks. Everything else will be the exact same with the original experiment, including the brush size, and the exact red and blue colors for indicating activation and deactivation, and the randomization of word orders.
+
+In addition to the "Bodily Sensation Maps (BSM)" measure, language background survey will be attached at the end to accurately identify the target culture group. For assessing the language background, subscales from the Language Experience and Proficiency Questionnaire (LEAP-Q, Marian et al., 2007) will be used. The 23 items include the number of languages the participants speak, the order of acquisition and dominance of each languages they can speak, self-rated proficiency, and the context of usage of the listed languages.
 
 ### Procedure	
 
-Can quote directly from original article - just put the text in quotations and note that this was followed precisely.  Or, quote directly and just point out exceptions to what was described in the original article.
+Participants will be presented with two silhouettes of bodies alongside one of the seven emotion words (six basic emotions or neutral), and will be "asked to color the bodily regions whose activity they felt to be increased or decreased during viewing of each stimulus". Then, they will fill out the language background survey.
 
 ### Analysis Plan
 
-Can also quote directly, though it is less often spelled out effectively for an analysis strategy section.  The key is to report an analysis strategy that is as close to the original - data cleaning rules, data exclusion rules, covariates, etc. - as possible.  
+The resulting data from "Bodily Sensation Maps (BSM)" measure will be "stored in matrices where the paint intensity ranged from 0 to 100" in each location. As a result, data from both bodies (the left body indicating activation, the right body indicating deactivation) consists of 50,364 pixels.
 
-**Clarify key analysis of interest here**  You can also pre-specify additional analyses you plan to do.
+For data inspection, data will be "screened manually for anomalous painting behavior (e.g., drawing symbols on bodies or scribbling randomly). Moreover, participants leaving more than mean + 2.5 SDs of bodies untouched" will be removed. Next, participants' activation and deactivation data for each emotion will be "combined into single BSMs representing both activations and deactivations and responses outside the body area were masked." 
+
+Based on this combined BSMs, mass univariate t tests will be performed "on the subjectwise BSMs to compare pixelwise activations and deactivations of the BSMs for each emotional state against zero." This will result in "statistical t-maps where pixel intensities reflect statistically significant experienced bodily changes associated with each emotional state." False discovery rate (FDR) correction (alpha level= 0.05) will be applied to correct for multiple comparison. 
+
+To compute the correlation between the BSM measures of different emotions, pairwise similarity of different emotion pairs will be calculated using Spearman correlation. Zero values in the heatmaps (i.e., regions without paint) will be filled with Gaussian noise to avoid inflated correlations. "The Spearman correlation was chosen as the optimal similarity metric due to the high dimensionality of the data within each map." Then, based on the all possible pairs between emotions, similarity matrix per each participant will be calculated, on which the group similarity matrix will be calculated by averaging individual similarity matrices. Based on these measures, the correlation score within the culture group and between the culture group will be calculated.
 
 ### Differences from Original Study
 
-Explicitly describe known differences in sample, setting, procedure, and analysis plan from original study.  The goal, of course, is to minimize those differences, but differences will inevitably occur.  Also, note whether such differences are anticipated to make a difference based on claims in the original article or subsequent published research on the conditions for obtaining the effect.
+In this conceptual replication, I plan to recruit Korean participants and native English speakers from USA, due to the challenge in recruiting Finnish and Taiwanese participants through prolific, and our research team lacking sufficient language proficiency to interpret responses from these groups with confidence. It is highly likely that the Korean participants recruited through prolific are as equally proficient in English or more familiar to Western cultural context. This could serve as a potential covariate, which I plan to capture using the language background survey. It could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al. (2014).
 
+<!--
 ### Methods Addendum (Post Data Collection)
 
 You can comment this section out prior to final report with data collection.
+
 
 #### Actual Sample
   Sample size, demographics, data exclusions based on rules spelled out in analysis plan
 
 #### Differences from pre-data collection methods plan
   Any differences from what was described as the original plan, or “none”.
-
+-->
 
 ## Results
 
 
 ### Data preparation
 
-Data preparation following the analysis plan.
+Data preparation will follow the procedure described in the 'Analysis plan' section. Matlab code provided by the authors of the papers (in this [link](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/matlab?ref_type=heads])) will be imported to follow the exact procedure used from the paper. The code provided involves preprocessing the raw BSM data into the construction of statistical t-maps with corrections for multiple comparison.
+
+<!--
 	
 ```{r include=F}
 ### Data Preparation
@@ -87,15 +101,28 @@ Data preparation following the analysis plan.
 #### Prepare data for analysis - create columns etc.
 ```
 
+-->
+
 ### Confirmatory analysis
 
-The analyses as specified in the analysis plan.  
+Confirmatory analysis will follow the procedure described in the 'Analysis plan' section. Using the preprocessed file as a result of running the matlab code specified above, the resulting .mat file will be directly imported to python for the confirmatory analysis, which is comparing the aggregated Spearman correlation within and between the culture groups.
 
+<!--
 *Side-by-side graph with original graph is ideal here*
 
 ### Exploratory analyses
 
 Any follow-up analyses desired (not required).  
+-->
+
+## Reference
+- Barrett, L. F., & Lindquist, K. A. (2008). The embodiment of emotion. Embodied grounding: Social, cognitive, affective, and neuroscientific approaches, 237-262.
+- Damasio, A., & Carvalho, G. B. (2013). The nature of feelings: evolutionary and neurobiological origins. Nature Reviews Neuroscience, 14(2), 143-152.
+- Marian, V., Blumenfeld, H. K., & Kaushanskaya, M. (2007). The Language Experience and Proficiency Questionnaire (LEAP-Q): Assessing Language Profiles in Bilinguals and Multilinguals. Journal of Speech, Language, and Hearing Research, 50(4), 940–967. https://doi.org/10.1044/1092-4388(2007/067)
+- Nummenmaa, L., Glerean, E., Hari, R., & Hietanen, J. K. (2014). Bodily maps of emotions. Proceedings of the National Academy of Sciences, 111(2), 646-651.
+- Volynets, S., Glerean, E., Hietanen, J. K., Hari, R., & Nummenmaa, L. (2020). Bodily maps of emotions are culturally universal. Emotion, 20(7), 1127.
+
+<!--
 
 ## Discussion
 
