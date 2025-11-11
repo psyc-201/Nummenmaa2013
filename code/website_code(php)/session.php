@@ -89,8 +89,8 @@ if ($amount == 1) {
     // Automatic redirection to the Qualtrics survey after completion
     if ($auto == 1) {
         // Append userID to the Qualtrics URL as a query parameter
-        $qualtricsURL = "https://ucsd.co1.qualtrics.com/jfe/form/SV_b1NNeCgCe0ToG6G?userID=" . urlencode($userID);
-        header("Location: " . $qualtricsURL);
+        $prolificURL = "https://app.prolific.com/submissions/complete?cc=COQARJXK";
+        header("Location: " . $prolificURL);
         exit(); // Stop further script execution to avoid output
     }
 
