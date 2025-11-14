@@ -105,6 +105,13 @@ $perc = $_GET['perc'];
 }
 </style>
 
+<!-- ADDED: Pass server-side vars to JavaScript for timestamp recording -->
+<script type="text/javascript">
+const userID = "<?php echo $userID; ?>";  // 🔧 ADDED
+const presentation = "<?php echo $p; ?>"; // 🔧 ADDED
+const startTime = Date.now();             // 🔧 ADDED
+</script>
+
 <script type="text/javascript">
 // Variables
 var outfile = "<?php echo $outfile; ?>";
@@ -214,6 +221,7 @@ $("#pbox-canvas")
   });
 
 // Submit
+// REVISED: Submit handler now also records timestamps
 $("#movenext").submit(function(event) {
     event.preventDefault(); // Always block normal form behavior
 
@@ -222,21 +230,38 @@ $("#movenext").submit(function(event) {
         return; // Stop here — do not send anything to server
     }
 
-    var $form = $(this);
-    var url = $form.attr('action');
+    const submitTime = Date.now();  // 🔧 ADDED
 
-    $.post(url, {
-        'arrX': arrX,
-        'arrY': arrY,
-        'arrTime': arrTime,
-        'file': outfile
-    }, function(data) {
-        if (data == 1)
-            window.location = "session.php?auto=1&userID=<?php echo $userID; ?>";
-        else
-            window.location = "error.html";
+    // 🔧 ADDED: Save timestamps before proceeding
+    fetch("save_timestamps.php", {
+        method: "POST",
+        body: new URLSearchParams({
+            userID: userID,
+            presentation: presentation,
+            start_time: startTime,
+            submit_time: submitTime
+        })
+    }).then(response => response.text())
+      .then(data => {
+        console.log("Timestamp saved:", data);
+        // Continue submission
+        var $form = $("#movenext");
+        var url = $form.attr('action');
+
+        $.post(url, {
+            'arrX': arrX,
+            'arrY': arrY,
+            'arrTime': arrTime,
+            'file': "<?php echo $outfile; ?>"
+        }, function(data) {
+            if (data == 1)
+                window.location = "session.php?auto=1&userID=" + userID;
+            else
+                window.location = "error.html";
+        });
     });
 });
+
 
 </script>
 
