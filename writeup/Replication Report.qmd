@@ -12,7 +12,7 @@ format:
 
 The link to the repository is [here](https://github.com/yoonwonj/Jung2025), and to the original paper is [here](https://github.com/yoonwonj/Jung2025/tree/main/original_paper). 
 
-The link to the paradigm with an example prolific metadata attached is [here](https://ucsd.co1.qualtrics.com/jfe/form/SV_09ek8xGx9T6CPjg?userID=5f5a5b9360d7fa1045aad5df&STUDY_ID=69151afb2207ed52db9f8152&SESSION_ID=0xqk8jnk15b). It starts with the consent form and a quick language background survey, which the lab I am in already renders and uses in qualtrics, then automatically gets redirected to the web experiment. The redirection to prolific after completing the survey is also rendered, while redirection is not needed for piloting outside of prolific. 
+The link to the paradigm with an example prolific metadata attached is [here](https://ucsd.co1.qualtrics.com/jfe/form/SV_09ek8xGx9T6CPjg?userID=5f5a5b9360d7fa1045aad5df&STUDY_ID=69151afb2207ed52db9f8152&SESSION_ID=0xqk8jnk15b).
 
 ## Introduction
 
@@ -104,9 +104,9 @@ Data preparation will follow the procedure described in the 'Analysis plan' sect
 
 ### Confirmatory analysis
 
-For sanity check, I performed the basic preprocessing on the pilot data (in './data/pilot/drawing_data' folder) using embody_preprocessing.mat file. It is a modified version based on what's provided by the authors, mainly handling incomplete datapoints. The result of running the preprocessed file is stored in './data/pilot/preprocessed_data' folder. I collected two pilot data from the class, and tried visualizing one the preprocessed data to see if they are preprocessed correctly. Due to my quarto file's failure in execute python code successfully, I added the visualization code and the result in a separate file ('./code/Preprocess_visualize.ipynb').
+For pilot A, I collected two pilot data from the class. For sanity check, I performed the basic preprocessing on pilot A data (in './data/pilotA' folder). The data consists of two parts: the the drawing data and language survey data. First, I used matlab code, a modified version of what's provided by the authors, to preprocess the drawing data (in './code/matlab_preprocess_code' folder.) Then, I tried visualizing one the preprocessed data to see if they are preprocessed correctly. Due to my quarto file's failure in execute python code successfully, I added the visualization code and the result in a separate file ('./code/Preprocess_visualize_pilotA.ipynb'). Then, I performed quality screening based on completion, two attention checks (from the survey data). The code and the results, including the visualization of the screening results, are stored in './code/Preprocess_survey_visualize_pilotA.ipynb'.
 
-For additional checks, I analyzed several descriptive statistics, along with the responses to attention checks. The survey data, consisting of consent and language background, is part of the experiment and is stored separately as a csv file. The the survey portion of the pilot data is stored in './data/pilot/survey' folder. Quick filtering of participants, along with the visualization, based on completion and two attention checks are stored in a separate file ('./code/Preprocess_survey_visualize.ipynb').
+After collecting 3 samples from prolific for pilot B, I went through the same process described above, and stored the data in './data/pilotB' folder. The code for visualizing one of the participant's drawing is stored in './code/Preprocess_visualize_pilotB.ipynb.' After pilot A, I added codes to measure and store the trial duration from the drawing data. Then, I added trial duration (from the drawing data) as another screening variable. The resulting quality screening based on completion, two attention checks, and trial durations are stored in './code/Preprocess_survey_visualize_pilotB.ipynb'.
 
 
 <!--
