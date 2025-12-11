@@ -4,8 +4,8 @@ This is a copy of the GitHub template to use for replications projects in PSYCH 
 
 This project aims to replicate experiment 1c from Numenmaa et al. (2013). See 'Replication_Report' in the 'writeup' folder for the description of procedures, codes, and the result. Data is stored in the 'data' folder. 'qualtrics_source' and 'website_code' contains the qsf file and the php code (adapted from [this](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads).) for the web experiment.
 
-## Data structure
-The data format of this project includes survey data (.csv) , raw painting data (pixel coordinates), and the processed pixel coordinates of the drawing data for BSMs (.mat). 'data' folder includes pilot A, pilot B, and the data from the main experiment, as well as a folder containing some files needed for preprocessing. For each folder ('pilot A', 'pilot B', 'final_data', the survey data, raw drawing data, and the processed drawing data is stored in separate folders.)
+## Data types and structures
+The data format of this project includes survey data (.csv) , raw painting data (pixel coordinates), and the processed pixel coordinates of the drawing data for BSMs (.mat). 'data' folder includes data from pilot A, pilot B, and the data from the main experiment, as well as a folder containing some files needed for preprocessing. For each folder ('pilot A', 'pilot B', 'final_data'), the survey data, raw drawing data, and the processed drawing data is stored in separate subfolders.
 
 ### Drawing data (pixel coordinates)
 If you follow the code written in 'Replication_Report', you should be able to load and process the raw data. Please refer to the 'website_code' folder to get more sense of how the raw coordinates are stored for each emotion. 
