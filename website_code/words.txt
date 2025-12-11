@@ -1,0 +1,8 @@
+Nothing special (neutral)
+Fear
+Anger
+Disgust
+Sadness
+Happiness
+Surprise
+

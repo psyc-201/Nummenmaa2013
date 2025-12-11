@@ -1,0 +1,1863 @@
+---
+title: "Replication of Experiment by Nummenmaa et al. (2014, PNAS)"
+author: "Yoonwon Jung (y5jung@ucsd.edu)"
+date: today
+date-format: "MMMM D, YYYY"
+format:
+  html:
+    toc: true
+    toc_depth: 3
+---
+
+
+
+<!-- Replication reports should all use this template to standardize reporting across projects.  These reports will be public supplementary materials that accompany the summary report(s) of the aggregate results. -->
+
+The link to the repository is available [here](https://github.com/yoonwonj/Jung2025), and to the original paper is available [here](https://github.com/yoonwonj/Jung2025/tree/main/original_paper). The preregistration could be accessed [here](https://osf.io/5pvwm/overview).
+
+The paradigm (excluding the survey) could be accessed [through this link](http://164.90.146.60/v1/index.php?userID=psychdemo).
+
+## Introduction
+
+Emotion is an embodied experience, involving interaction between mind and body (Barrett & Lindquist, 2008; Damasio & Carvalho, 2013). Contemporary models of emotion diverge in whether the bodily changes associated with emotions follow a universal pattern (Barrett et al., 2006; Kreibig, 2010; Volynets et al., 2020). A series of research explored universality of how people associate different emotions with bodily sensations across 15 countries (Nummenmaa et al., 2014; Volynets et al., 2020). In particular, for the replication project, I focus on the experiment 1c from Nummenmaa et al. (2014), where they conducted a comparison between two different cultural groups: Finnish-Taiwanese (N=36). These groups differ more substantially in both cultural and linguistic distance than the two groups in experiment 1b (Finnish-Swedish,) and the small sample size makes the replication feasible within the short time frame. However, recruiting Finnish and Taiwanese participants is challenging, and our research team lacks sufficient language proficiency to interpret responses from these groups with confidence. To address this, I propose to conceptually replicate the study using two culturally distant populations that are more accessible: native English-speaking Americans and Koreans. 
+
+Nummenmaa et al. (2014) included two independent variables - the type of emotion words (basic vs nonbasic; measured within-subject), and the culture group (Finnish vs Taiwanese; measured between-subject). For replicating experiment 1c, we focused on the second variable, the culture group differences, specifically, whether the Spearman correlation between embodied emotion representation of two participants from different cultures are larger within the basic emotion categories (matched condition; anger-Finnish vs anger-Taiwanese) than that of between-category (mismatched condition; anger-Finnish vs happiness-Taiwanese).The effect size between the two conditions and the variability measures are not reported in the study, and the data of the original paper was not accessible to the original paper's authors. Therefore, the replication objective was to replicating the correlation values of the two conditions.
+
+In addition, we conducted exploratory analyses extending beyond the original study. Specifically, we applied the same procedures to within-cultural participant pairs (i.e., two native Korean-speaking participants or two native English-speaking participants). Using the correlation values from matched and mismatched emotion conditions in these within-cultural pairs, we also explored differences between within-culture and between-culture similarity patterns.
+
+One anticipated challenge in running this experiment on Prolific is accurately identifying participants’ cultural backgrounds. Especially for Korean speakers recruited through prolific, it is highly likely that they are equally proficient in English or more familiar with the Western cultural context. To mitigate this, a language background survey will be attached, in addition to the body representation task, so that we can accurately identify the target culture group. 
+
+<!--
+It is expected for Korean participants recruited from prolific to also have some English exposure or regular usage of English in their everyday lives. If some additional analyses beyond what's originally done in experiment 1c is feasible to do, for example, comparing the within-category variation within a culture group (correlation of anger-Korean and anger-Korean) and outside culture groups (correlation of anger-Korean and anger-English), it could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al. (2014).
+-->
+
+## Methods
+
+### Reliability and Validity
+The experiment that I plan to replicate (experiment 1c) did not report any reliability or validity related measures. However, experiment 1b and experiment 1c were attemps to measure whether the trend observed in experiment 1 generalizes to other cultures, especially for the basic emotions. Therefore, the experiment 1c itself is an attempt to check the external validity.
+
+
+### Power Analysis
+
+Power analysis was not feasible because the original paper did not report the effect size, nor the original data was accessible. Therefore, this replication closely followed the sample size of the original experiment.
+
+### Planned Sample
+
+Following the sample size in Nummenmaa et al. (2014), 36 participants were collected, with 18 participants in each cultural group (United States, Korea.) To recruit two separate culture group, two separate prolific studies were created. To filter Korean participants, First Language-Korean, Primary Language-Korean, and Nationality-Korean filters were applied in prolific. To filter native English speakers from USA, Primary Language-English, First Language-English, and Nationality-United States filters were applied in prolific. Although there are only a small number of eligible Korean participants, recruiting 18 participants is practically feasible.
+
+Since the estimated completion time is around 10 minutes, the compensation will be 1/6 of the average between the minimum California hourly wage and the federal hourly rage (\$12/hour in average): each participant were be paid \$2.00.
+
+### Materials
+
+To measure the embodied representation of emotion, "Bodily Sensation Maps (BSM)" will be used, where participants will color body regions where they feel increased or decreased bodily activity for each emotion word presented. Six basic (anger, fear, disgust, happiness, sadness, and surprise) emotions, as well as a neutral state, will be presented. Web-based version of the BSM measure was created using the code provided in their repository ([link](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/v1?ref_type=heads)), along with some minor changes wordings of the instructions. Unlike the original version, I also modified the code so that drawing outside of the body silhouette was not allowed or stored as data. Two versions of the experiment (one for the Korean speaking participants, and one for English speaking participants) were created, as experiment 1c also translated their materials into the respective languages that each cultural group speaks. Everything else remains the same with the original experiment, including the brush size, and the exact red and blue colors for indicating activation and deactivation, and the randomization of word orders.
+
+In addition to the BSM measure, language background survey was attached at the end to accurately identify the target culture group. For assessing the language background, subscales from the Language Experience and Proficiency Questionnaire (LEAP-Q, Marian et al., 2007) will be used. The scales include the number of languages the participants speak, the order of acquisition and dominance of each languages they can speak, self-rated proficiency, and the context of usage of the listed languages.
+
+### Procedure	
+
+Participants were presented with two silhouettes of bodies alongside one of the seven emotion words (six basic emotions or neutral), and was asked to color the bodily regions were they felt activated or deactivated when feeling the given emotion. Then, they will fill out the language background survey.
+
+### Analysis Plan
+
+The resulting data from Bodily Sensation Maps (BSM) measure were stored in a separate server, with each response as a group of coordinates indicating the participants' brush touch. Using the preprocessing code provided by the authors, these groups of coordinates were converted to matrices storing count information in each pixel. Data from both bodies (the left body indicating activation, the right body indicating deactivation) consisted of 50,364 pixels each, with pixels only inside the body were calculated.
+
+Exclusion criteria were attention check failures, trial completion time, and the drawing pattern shown in the BSM data. First, if the data points from participants failing any of the two attention checks were excluded. Moreover, data points from participants who had more than one trial completed in less than 5 seconds were excluded. Lastly, by visualizing each participant's responses for each emotion, drawings exhibiting the similar response across 70% or more of the conditions (5 emotions out of 7) in both bodies, or exhibiting significant overlap in deactivation and activation responses in more than one condition, were excluded from the final analyses.
+
+Following Nummenmaa et al. (2014), the similarity between the two emotion-wise BSMs from two participants were measured through pixel-wise correlation (Spearman's rank correlation). Zero values in the heatmaps (i.e., regions without paint) were filled with Gaussian noise to avoid inflated correlations. Pixels outside the body silhouette were masked and not considered for analysis. For every possible cross-cultural participant pair (i.e., one native Korean and one native English-speaking participant), correlations for both matched-emotion BSMs (e.g., sadness–sadness) and mismatched-emotion BSMs (e.g., sadness–anger) were computed. Although we initially planned to compare the resulting correlation distributions using a t-test to evaluate differences between matched and mismatched conditions, we ultimately did not conduct this test because the correlations in both conditions were negligibly small. Although some details of the analysis pipeline were not fully specified in the original paper, the procedure described here is inferred from the results of Experiment 1c.
+
+### Differences from Original Study
+
+In this conceptual replication, we recruited Korean participants and native English speakers from USA, due to the challenge in recruiting Finnish and Taiwanese participants through prolific, and our research team lacking sufficient language proficiency to interpret responses from these groups with confidence. It is highly likely that the Korean participants recruited through prolific are as equally proficient in English or more familiar to Western cultural context. It could be expected that the differences between within and between culture correlation will be smaller in the replication sample than that of the data from Nummenmaa et al. (2014).
+
+Moreover, stricter exclusion criteria were contrived, given that this replication was conducted online. It is unclear whether the original experiment was conducted in-person or online, but since the original study used manual inspection to remove anomalous painting behavior, this project applies stricter criteria beyond the manual inspection for clearer criteria.
+
+### Methods Addendum (Post Data Collection)
+
+#### Actual Sample
+  Among 36 datapoints, 7 were excluded for the final analysis, according to the data exclusions spelled out in analysis plan. As a result, this project ended up undersampling than the original study, but the main trend were very similar when we used the full sample without exclusion, which will be discussed below.
+  
+Below is the exclusion result based on the survey data.
+  
+```{python}
+import pandas as pd
+survey= pd.read_csv('../data/final_data/survey/Bodymap_consent_language_history_prolific_id_corrected.csv')
+
+# exclude data from preview mode
+survey=survey[survey.DistributionChannel!="preview"]
+# Exclude rows with missing or empty userID
+survey = survey[survey['userID'].notna() & 
+                              (survey['userID'].str.strip() != "")]
+
+n_total= len(survey)
+survey.head()
+
+```
+  
+```{python}  
+# filter out unfinished ones
+survey=survey[survey.Finished==1]
+
+n_after_incomplete= len(survey)
+
+#attention check screening
+survey=survey[(survey.Eng_langenv_4=="7 years")|(survey.Eng_langenv_4=="7Years")|(survey.Eng_langenv_4=="7")]
+
+survey=survey[survey.Eng_learnev_5==7]
+
+n_after_att_check= len(survey)
+```
+
+```{python}  
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+# -----------------------------
+# EXCLUSION SUMMARY TABLE
+# -----------------------------
+exclusion_summary = pd.DataFrame({
+    "Stage": [
+        "Initial",
+        "After incompletion",
+        "After attention checks",
+        "Final"
+    ],
+    "N_Participants": [
+        n_total,
+        n_after_incomplete,
+        n_after_att_check,
+        n_after_att_check
+    ],
+    "N_Excluded": [
+        0,
+        n_total-n_after_incomplete,
+        n_after_incomplete-n_after_att_check,
+        None
+    ]
+})
+
+print(exclusion_summary)
+
+plt.figure(figsize=(10, 6))
+
+stages = exclusion_summary["Stage"]
+counts = exclusion_summary["N_Participants"]
+
+plt.bar(stages, counts, alpha=0.7)
+
+plt.title("Participant Exclusion Cascade (survey data)", fontsize=16)
+plt.xlabel("Exclusion stages")
+plt.ylabel("Number of Participants")
+plt.xticks(rotation=45, ha='right')
+
+plt.tight_layout()
+plt.show()
+
+```
+
+Below is the exclusion result based on the drawing data (BSM).
+  
+```{python}  
+# get the list of participants from the drawing data
+import os
+
+base_path = r"../data/final_data/drawing_data_raw/"
+
+csv_counts = {}
+duration= {}
+
+# Loop through all items in the base directory
+for item in os.listdir(base_path):
+    dir_path = os.path.join(base_path, item)
+
+    # Only process directories
+    if os.path.isdir(dir_path):
+        # Count CSV files inside this directory
+        count = sum(1 for f in os.listdir(dir_path) if f.lower().endswith(".csv"))
+        csv_counts[item] = count
+
+        # Only process duration if participant has 7 trials (8 files including timestamp.csv)
+        if count == 8:
+            timestamp_path = os.path.join(dir_path, "timestamps.csv")
+
+            if os.path.exists(timestamp_path):
+                df = pd.read_csv(timestamp_path)
+
+                # compute duration per trial (in milliseconds)
+                df["duration_ms"] = df["submit_timestamp"] - df["start_timestamp"]
+
+                # store as dictionary: {trial_id: duration}
+                duration[item] = dict(zip(df["trial_id"], df["duration_ms"]))
+
+# Print summary
+print("CSV counts:", csv_counts)
+print("Durations:", duration)
+```
+
+```{python}  
+# duration: participants who spent < 5 seconds in more than one trial
+exclude_fast = []
+for pid, trials in duration.items():
+    too_fast = sum(d < 5000 for d in trials.values())
+    if too_fast > 1:
+        exclude_fast.append(pid)
+
+survey = survey[~survey["userID"].isin(exclude_fast)]
+
+n_after_duration_filter = len(survey)
+
+
+
+```
+
+```{python}  
+import os
+import pandas as pd
+
+overlap_base = r"../data/final_data/both_sides_counts/"
+
+overlaps = {}   # {participant_id_from_filename: {condition: overlap_value}}
+
+for fname in os.listdir(overlap_base):
+    if not fname.lower().endswith(".txt"):
+        continue
+
+    # participant ID from filename (e.g., "5c1980c24a03080001139d5a_bothSides.txt")
+    pid = fname.split('_')[0]
+    fpath = os.path.join(overlap_base, fname)
+
+    # Let pandas auto-detect the delimiter
+    df = pd.read_csv(fpath, sep=None, engine="python")
+
+    # Use the last (or only) row
+    row = df.iloc[-1]
+
+    # Drop the first column value (the embedded ID under 'Neutral')
+    # Keep overlaps for actual emotion conditions
+    values = row[1:]  # everything except the first column
+
+    # Force numeric conversion (just in case)
+    values = pd.to_numeric(values, errors='coerce')
+
+    # Store as dict: {condition_name: overlap_value}
+    cond_names = df.columns[1:]  # skip the first column name
+    cond_dict = dict(zip(cond_names, values))
+
+    overlaps[pid] = cond_dict
+
+print("Loaded overlap counts for", len(overlaps), "participants")
+
+# Optional sanity check on one participant:
+example_pid = next(iter(overlaps)) if overlaps else None
+if example_pid:
+    print("Example participant:", example_pid)
+    print(overlaps[example_pid])
+
+```
+
+
+```{python}  
+# Participants who show "lots of positive/negative overlap in more than one emotion condition
+
+exclude_overlap = []
+
+OVERLAP_THRESHOLD = 1000 
+
+for pid, cond_dict in overlaps.items():
+    # Count how many conditions exceed the threshold (ignoring NaN)
+    n_big_overlaps = sum(
+        (v > OVERLAP_THRESHOLD) 
+        for v in cond_dict.values() 
+        if pd.notna(v)
+    )
+    if n_big_overlaps > 1:
+        exclude_overlap.append(pid)
+
+print("Participants excluded for overlap:", exclude_overlap)
+print("Number excluded for overlap:", len(exclude_overlap))
+
+survey = survey[~survey["userID"].isin(exclude_overlap)]
+
+n_after_overlap_filter = len(survey)
+
+print(n_after_overlap_filter)
+```
+
+```{python}
+import pandas as pd
+
+df_exclude = pd.DataFrame({'userID': exclude_overlap})
+
+df_exclude.to_csv("../data/files_for_preprocessing/final_data_exclusion_list.csv", index=False)
+
+print("Saved: final_data_exclusion_list.csv")
+
+```
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+# -----------------------------
+# EXCLUSION SUMMARY TABLE
+# -----------------------------
+exclusion_summary = pd.DataFrame({
+    "Stage": [
+        "After survey-based exclusion",
+        "After duration filtering",
+        "After activation/deactivation overlap filtering",
+    ],
+    "N_Participants": [
+        n_after_att_check,
+        n_after_duration_filter,
+        n_after_overlap_filter
+    ],
+    "N_Excluded": [
+        0,
+        n_after_att_check-n_after_duration_filter,
+        n_after_duration_filter-n_after_overlap_filter,
+    ]
+})
+
+print(exclusion_summary)
+
+plt.figure(figsize=(10, 6))
+
+stages = exclusion_summary["Stage"]
+counts = exclusion_summary["N_Participants"]
+
+plt.bar(stages, counts, alpha=0.7)
+
+plt.title("Participant Exclusion Cascade (drawing data)", fontsize=16)
+plt.xlabel("Exclusion stages")
+plt.ylabel("Number of Participants")
+plt.xticks(rotation=45, ha='right')
+
+plt.tight_layout()
+plt.show()
+```
+
+### Data storage
+  Raw data is stored in a local server and a qualtrics server. For the pilot data, the last two characters of the prolific IDs were altered. For the data from the main experiment, all participants were renamed as re-assigning anonymized IDs. Only the anonymized data was shared on github.
+
+#### Differences from pre-data collection methods plan
+  None
+
+## Results
+
+### Pilot experiments
+Two pilot study was conducted to confirm the paradigm is working as desired, and to make sure the data is being saved correctly. For pilot A, two datapoints were collected amonst the students taking "PSYC201A" class at UCSD. the processing of the drawing data seemed successful, as shown by the visualization of one of the participants' responses. The detailed explanation of preprocessing method is described in the next section.
+
+Moreover, exclusions were performed to test the appropriateness of the exclusion criteria. The resulting exclusions are presented below.
+
+```{python}
+# ---
+# Drawing data is pre-processed using a matlab script, provided by the original paper's authors.
+# Data Preparation: additional processing of the pre-processed drawing data (.mat files)
+# ---
+
+import os
+import math
+import numpy as np
+import scipy.io
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+import matplotlib.cm as cm
+import matplotlib.gridspec as gridspec
+import matplotlib.image as mpimg
+from skimage.transform import resize
+
+# -----------------------------------------------------
+# Load emotion labels
+# -----------------------------------------------------
+labels = [
+    'Neutral', 'Fear', 'Anger', 'Disgust', 'Sadness', 'Happiness', 'Surprise'
+]
+
+raw_maps = {}  # structure: {subject_id: {emotion_label: 2D numpy array}}
+
+# -----------------------------------------------------
+# Choose which preprocessed files to load
+# -----------------------------------------------------
+basepath = r'../data/pilotA/preprocessed_data/'
+
+files = sorted([f for f in os.listdir(basepath) if f.endswith('.mat')])
+
+NS = len(files)
+NC = 7
+
+# -----------------------------------------------------
+# Load MATLAB data into python dictionary
+# -----------------------------------------------------
+for s, fname in enumerate(files):
+    subject_id = fname.split('_')[0]
+    mat = scipy.io.loadmat(os.path.join(basepath, fname))
+    resmat = mat['resmat']  # shape: [H, W, NC]
+
+    raw_maps[subject_id] = {}
+
+    for n in range(NC):
+        subj_map = resmat[:, :, n]
+        raw = np.copy(subj_map)
+
+        emotion_label = labels[n].replace(" ", "_").lower()
+        raw_maps[subject_id][emotion_label] = raw
+
+
+# -----------------------------------------------------
+# Load base silhouette and mask
+# -----------------------------------------------------
+base = mpimg.imread('../data/files_for_preprocessing/base.png')
+mask = mpimg.imread('../data/files_for_preprocessing/mask.png')  # α mask: 0–255 or 0–1
+
+# MATLAB→Python corrected crop (inclusive in MATLAB → end-exclusive in Python)
+base2 = base[10:532, 33:204, :]
+
+# Normalize mask range
+mask_f = mask.astype(float)
+if mask_f.max() > 1:
+    mask_f = mask_f / 255.0
+# If mask is RGB, convert to single channel
+if mask_f.ndim == 3:
+    mask_f = mask_f[:, :, 0]
+
+# -----------------------------------------------------
+# Pick a subject to plot
+# -----------------------------------------------------
+subject_id = list(raw_maps.keys())[0]
+print(f"Plotting subject: {subject_id}")
+
+emotion_keys = list(raw_maps[subject_id].keys())
+H_map, W_map = raw_maps[subject_id][emotion_keys[0]].shape
+H_base, W_base = base2.shape[:2]
+
+if (H_map, W_map) != (H_base, W_base):
+    raise ValueError(
+        f"ERROR: Map size {H_map}x{W_map} does not match silhouette size {H_base}x{W_base}.\n"
+        "Remove resizing only if they already match."
+    )
+
+# -----------------------------------------------------
+# Build custom diverging colormap
+# -----------------------------------------------------
+NumCol = 64
+hot = cm.hot(np.linspace(0, 1, NumCol))[:, :3]
+cold = np.flipud(hot[:, ::-1])
+neutral = np.zeros((2 * round(NumCol * 0.05), 3))
+lut = np.vstack([cold, neutral, hot])
+final_cmap = ListedColormap(lut)
+
+# compute symmetric intensity bound
+all_vals = np.hstack([raw_maps[subject_id][emo].ravel() for emo in emotion_keys])
+M = np.max(np.abs(all_vals))
+print("Symmetric intensity scale limit M =", M)
+
+# -----------------------------------------------------
+# Plot body maps (mask-aware RGBA overlay + safe title spacing)
+# -----------------------------------------------------
+ncols = 7
+nrows = math.ceil(NC / ncols)
+
+fig = plt.figure(figsize=(2.5 * ncols + 2, 2.5 * nrows))
+gs = gridspec.GridSpec(
+    nrows, ncols + 1,
+    width_ratios=[1] * ncols + [0.18],
+    wspace=0.05, hspace=0.25
+)
+
+for idx, emo in enumerate(emotion_keys):
+    row = idx // ncols
+    col = idx % ncols
+    ax = fig.add_subplot(gs[row, col])
+
+    # Draw silhouette
+    ax.imshow(base2, zorder=0)
+
+    # ===== Mask-aware RGBA overlay (no black square) =====
+    data = raw_maps[subject_id][emo]  # H×W
+    # normalize to [0,1] consistent with vmin=-M, vmax=M
+    normed = np.clip((data + M) / (2 * M), 0, 1)
+    rgba = final_cmap(normed)          # H×W×4
+    rgba[..., 3] = mask_f               # alpha = body mask (0 outside, 1 inside)
+    ax.imshow(rgba, interpolation='nearest', zorder=1)
+
+    ax.set_title(emo, fontsize=9)
+    ax.axis('off')
+
+# Blank unused subplots
+for idx in range(NC, nrows * ncols):
+    fig.add_subplot(gs[idx // ncols, idx % ncols]).axis('off')
+
+# Colorbar
+cax = fig.add_subplot(gs[:, -1])
+sm = plt.cm.ScalarMappable(cmap=final_cmap, norm=plt.Normalize(vmin=-M, vmax=M))
+sm.set_array([])
+plt.colorbar(sm, cax=cax)
+cax.set_ylabel("Intensity", rotation=270, labelpad=12)
+
+# Title & layout — avoid overlap, avoid tight_layout warning
+fig.suptitle(f"Emotion Body Maps (Subject {subject_id})", fontsize=18)
+
+# Move the figure content downward so the title sits above it
+fig.subplots_adjust(top=0.8)
+
+plt.show()
+
+```
+
+```{python}
+import pandas as pd
+import matplotlib.pyplot as plt
+
+pilot_consent= pd.read_csv('../data/pilotA/survey/Bodymap_consent_language_history_prolific_November 10, 2025_15.23.csv')
+
+# drop the unused column heads
+pilot_consent.drop([0,1], inplace=True)
+
+# exclude data from preview mode
+pilot_consent=pilot_consent[pilot_consent.DistributionChannel!="preview"]
+pilot_consent=pilot_consent[~pilot_consent.userID.str.contains("test")]
+
+n_total= len(pilot_consent)
+pilot_consent
+# filter out unfinished ones
+pilot_consent=pilot_consent[pilot_consent.Finished=="1"]
+
+n_after_incomplete= len(pilot_consent)
+
+#attention check screening
+pilot_consent=pilot_consent[pilot_consent.Eng_langenv_4=="7 years"]
+pilot_consent=pilot_consent[pilot_consent.Eng_learnev_5=="7"]
+
+n_after_att_check= len(pilot_consent)
+
+# -----------------------------
+# EXCLUSION SUMMARY TABLE
+# -----------------------------
+exclusion_summary = pd.DataFrame({
+    "Stage": [
+        "Initial",
+        "After incompletion",
+        "After attention checks",
+        "Final"
+    ],
+    "N_Participants": [
+        n_total,
+        n_after_incomplete,
+        n_after_att_check,
+        n_after_att_check
+    ],
+    "N_Excluded": [
+        0,
+        n_total-n_after_incomplete,
+        n_after_incomplete-n_after_att_check,
+        None
+    ]
+})
+
+print(exclusion_summary)
+
+plt.figure(figsize=(10, 6))
+
+stages = exclusion_summary["Stage"]
+counts = exclusion_summary["N_Participants"]
+
+plt.bar(stages, counts, alpha=0.7)
+
+plt.title("Participant Exclusion Cascade", fontsize=16)
+plt.xlabel("Exclusion stages")
+plt.ylabel("Number of Participants")
+plt.xticks(rotation=45, ha='right')
+
+plt.tight_layout()
+plt.show()
+
+
+```
+
+
+For pilot B, a sample of 3 participants is collected from prolific. After pilot A, the exclusion criteria of trial duration were added. The resulting exclusions based on completion, two attention checks, and trial duration are presented below.
+
+```{python}
+# ---
+# Drawing data is pre-processed using a matlab script, provided by the original paper's authors.
+# Data Preparation: additional processing of the pre-processed drawing data (.mat files)
+# ---
+
+import os
+import math
+import numpy as np
+import scipy.io
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+import matplotlib.cm as cm
+import matplotlib.gridspec as gridspec
+import matplotlib.image as mpimg
+from skimage.transform import resize
+
+# -----------------------------------------------------
+# Load emotion labels
+# -----------------------------------------------------
+labels = [
+    'Neutral', 'Fear', 'Anger', 'Disgust', 'Sadness', 'Happiness', 'Surprise'
+]
+
+raw_maps = {}  # structure: {subject_id: {emotion_label: 2D numpy array}}
+
+# -----------------------------------------------------
+# Choose which preprocessed files to load
+# -----------------------------------------------------
+basepath = r'../data/pilotB/preprocessed_data/'
+
+files = sorted([f for f in os.listdir(basepath) if f.endswith('.mat')])
+
+NS = len(files)
+NC = 7
+
+# -----------------------------------------------------
+# Load MATLAB data into python dictionary
+# -----------------------------------------------------
+for s, fname in enumerate(files):
+    subject_id = fname.split('_')[0]
+    mat = scipy.io.loadmat(os.path.join(basepath, fname))
+    resmat = mat['resmat']  # shape: [H, W, NC]
+
+    raw_maps[subject_id] = {}
+
+    for n in range(NC):
+        subj_map = resmat[:, :, n]
+        raw = np.copy(subj_map)
+
+        emotion_label = labels[n].replace(" ", "_").lower()
+        raw_maps[subject_id][emotion_label] = raw
+
+
+# -----------------------------------------------------
+# Load base silhouette and mask
+# -----------------------------------------------------
+base = mpimg.imread('../data/files_for_preprocessing/base.png')
+mask = mpimg.imread('../data/files_for_preprocessing/mask.png')  # α mask: 0–255 or 0–1
+
+# MATLAB→Python corrected crop (inclusive in MATLAB → end-exclusive in Python)
+base2 = base[10:532, 33:204, :]
+
+# Normalize mask range
+mask_f = mask.astype(float)
+if mask_f.max() > 1:
+    mask_f = mask_f / 255.0
+# If mask is RGB, convert to single channel
+if mask_f.ndim == 3:
+    mask_f = mask_f[:, :, 0]
+
+# -----------------------------------------------------
+# Pick a subject to plot
+# -----------------------------------------------------
+subject_id = list(raw_maps.keys())[0]
+print(f"Plotting subject: {subject_id}")
+
+emotion_keys = list(raw_maps[subject_id].keys())
+H_map, W_map = raw_maps[subject_id][emotion_keys[0]].shape
+H_base, W_base = base2.shape[:2]
+
+if (H_map, W_map) != (H_base, W_base):
+    raise ValueError(
+        f"ERROR: Map size {H_map}x{W_map} does not match silhouette size {H_base}x{W_base}.\n"
+        "Remove resizing only if they already match."
+    )
+
+# -----------------------------------------------------
+# Build custom diverging colormap
+# -----------------------------------------------------
+NumCol = 64
+hot = cm.hot(np.linspace(0, 1, NumCol))[:, :3]
+cold = np.flipud(hot[:, ::-1])
+neutral = np.zeros((2 * round(NumCol * 0.05), 3))
+lut = np.vstack([cold, neutral, hot])
+final_cmap = ListedColormap(lut)
+
+# compute symmetric intensity bound
+all_vals = np.hstack([raw_maps[subject_id][emo].ravel() for emo in emotion_keys])
+M = np.max(np.abs(all_vals))
+print("Symmetric intensity scale limit M =", M)
+
+# -----------------------------------------------------
+# Plot body maps (mask-aware RGBA overlay + safe title spacing)
+# -----------------------------------------------------
+ncols = 7
+nrows = math.ceil(NC / ncols)
+
+fig = plt.figure(figsize=(2.5 * ncols + 2, 2.5 * nrows))
+gs = gridspec.GridSpec(
+    nrows, ncols + 1,
+    width_ratios=[1] * ncols + [0.18],
+    wspace=0.05, hspace=0.25
+)
+
+for idx, emo in enumerate(emotion_keys):
+    row = idx // ncols
+    col = idx % ncols
+    ax = fig.add_subplot(gs[row, col])
+
+    # Draw silhouette
+    ax.imshow(base2, zorder=0)
+
+    # ===== Mask-aware RGBA overlay (no black square) =====
+    data = raw_maps[subject_id][emo]  # H×W
+    # normalize to [0,1] consistent with vmin=-M, vmax=M
+    normed = np.clip((data + M) / (2 * M), 0, 1)
+    rgba = final_cmap(normed)          # H×W×4
+    rgba[..., 3] = mask_f               # alpha = body mask (0 outside, 1 inside)
+    ax.imshow(rgba, interpolation='nearest', zorder=1)
+
+    ax.set_title(emo, fontsize=9)
+    ax.axis('off')
+
+# Blank unused subplots
+for idx in range(NC, nrows * ncols):
+    fig.add_subplot(gs[idx // ncols, idx % ncols]).axis('off')
+
+# Colorbar
+cax = fig.add_subplot(gs[:, -1])
+sm = plt.cm.ScalarMappable(cmap=final_cmap, norm=plt.Normalize(vmin=-M, vmax=M))
+sm.set_array([])
+plt.colorbar(sm, cax=cax)
+cax.set_ylabel("Intensity", rotation=270, labelpad=12)
+
+# Title & layout — avoid overlap, avoid tight_layout warning
+fig.suptitle(f"Emotion Body Maps (Subject {subject_id})", fontsize=18)
+
+# Move the figure content downward so the title sits above it
+fig.subplots_adjust(top=0.8)
+
+plt.show()
+```
+
+```{python}
+import pandas as pd
+pilot_consent= pd.read_csv('../data/pilotB/survey/Bodymap_consent_language_history_prolific_id_corrected.csv')
+
+# drop the unused column heads
+pilot_consent.drop([0,1], inplace=True)
+
+# exclude data from preview mode
+pilot_consent=pilot_consent[pilot_consent.DistributionChannel!="preview"]
+pilot_consent=pilot_consent[~pilot_consent.userID.str.contains("test")]
+
+n_total= len(pilot_consent)
+pilot_consent
+# get the list of participants from the drawing data
+import os
+
+base_path = r"../data/pilotB/drawing_data/"
+
+csv_counts = {}
+duration= {}
+
+# Loop through all items in the base directory
+for item in os.listdir(base_path):
+    dir_path = os.path.join(base_path, item)
+
+    # Only process directories
+    if os.path.isdir(dir_path):
+        # Count CSV files inside this directory
+        count = sum(1 for f in os.listdir(dir_path) if f.lower().endswith(".csv"))
+        csv_counts[item] = count
+
+        # Only process duration if participant has 7 trials (8 files including timestamp.csv)
+        if count == 8:
+            timestamp_path = os.path.join(dir_path, "timestamps.csv")
+
+            if os.path.exists(timestamp_path):
+                df = pd.read_csv(timestamp_path)
+
+                # compute duration per trial (in milliseconds)
+                df["duration_ms"] = df["submit_timestamp"] - df["start_timestamp"]
+
+                # store as dictionary: {trial_id: duration}
+                duration[item] = dict(zip(df["trial_id"], df["duration_ms"]))
+
+# Print summary
+print("CSV counts:", csv_counts)
+print("Durations:", duration)
+```
+
+```{python}
+#create a new column whether or not the participant completed the drawing part of the experiment
+for key, count in csv_counts.items():
+    pilot_consent.loc[pilot_consent["userID"] == key, "Finished_drawing"] = "1" if count == 8 else "0"
+# filter out unfinished ones
+pilot_consent=pilot_consent[pilot_consent.Finished=="1"]
+pilot_consent=pilot_consent[pilot_consent.Finished_drawing=="1"]
+
+n_after_incomplete= len(pilot_consent)
+
+#attention check screening
+pilot_consent=pilot_consent[pilot_consent.Eng_langenv_4=="7 years"]
+pilot_consent=pilot_consent[pilot_consent.Eng_learnev_5=="7"]
+
+n_after_att_check= len(pilot_consent)
+
+pilot_consent
+
+# duration: participants who spent < 5 seconds in more than one trial
+exclude_fast = []
+for pid, trials in duration.items():
+    too_fast = sum(d < 5000 for d in trials.values())
+    if too_fast > 1:
+        exclude_fast.append(pid)
+
+pilot_consent = pilot_consent[~pilot_consent["userID"].isin(exclude_fast)]
+
+n_after_duration_filter = len(pilot_consent)
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+# -----------------------------
+# EXCLUSION SUMMARY TABLE
+# -----------------------------
+exclusion_summary = pd.DataFrame({
+    "Stage": [
+        "Initial",
+        "After incompletion",
+        "After attention checks",
+        "After duration filtering",
+        "Final"
+    ],
+    "N_Participants": [
+        n_total,
+        n_after_incomplete,
+        n_after_att_check,
+        n_after_duration_filter,   # <-- NEW
+        n_after_duration_filter    # Final = same as after duration filtering
+    ],
+    "N_Excluded": [
+        0,
+        n_total - n_after_incomplete,
+        n_after_incomplete - n_after_att_check,
+        n_after_att_check - n_after_duration_filter,  # <-- NEW
+        None
+    ]
+})
+
+
+print(exclusion_summary)
+
+plt.figure(figsize=(10, 6))
+
+stages = exclusion_summary["Stage"]
+counts = exclusion_summary["N_Participants"]
+
+plt.bar(stages, counts, alpha=0.7)
+
+plt.title("Participant Exclusion Cascade", fontsize=16)
+plt.xlabel("Exclusion stages")
+plt.ylabel("Number of Participants")
+plt.xticks(rotation=45, ha='right')
+
+plt.tight_layout()
+plt.show()
+
+```
+
+
+Both pilot experiments were performed on English speakers from U.S., using the paradigm for English speakers. The paradigm for Korean speakers remained the same except for the emotion words, which were translated to Korean. 
+
+### Data preparation
+
+Data preparation will follow the procedure described in the 'Analysis plan' section. Matlab code provided by the authors of the papers (in this [link](https://version.aalto.fi/gitlab/eglerean/embody/-/tree/master/matlab?ref_type=heads])) will be imported to follow the exact procedure used from the paper. The code provided involves preprocessing the raw BSM data, which is loading the count vectors, performing Gaussian smoothing to simulate the brush size, and Subtract ‘deactivation’ values from ‘activation’ values to create a combined BSM map for each emotion per participant. THe matlab code used for preprocessing is pasted below:
+
+
+```{matlab}
+%% Modified from: "Short matlab demo to load and visualize emBODY data"
+%
+% - Please note that there are hard-coded parameters related to our
+% experiment version. If you modify the graphic layout of the web tool you
+% will need to change also how matlab preprocesses the data
+% - In our experiment we treated the left part of the screen as positive
+% values and the right part as negative values, and performed a subtraction
+% between the two. You are free to use the whole painting area and you
+% don't need to subtract the values if left and right silouhettes have
+% different meanings than activation/deactivation.
+% - The demo uses the function load_subj, make sure it is in your path
+% - It should be easy to rewrite this in python for those without a Matlab
+% license.
+%
+% Code by Enrico Glerean and Lauri Nummenmaa
+%
+% Thanks to Laura Harrison @ caltech for useful feedback
+
+% let's begin
+close all
+clear all
+
+% get a list of subjects
+cd('C:/Users/lovel/Documents/Embodiment/data_analysis/embody_matlab');
+basepath='../embody_matlab/drawing_data_prolific'; % folder where the subject data is a
+subjects=dir([basepath '\*']);
+subjects = subjects(~ismember({subjects.name},{'.','..'})); % remove . and ..
+disp("Folder names:");
+disp({subjects.name}');
+
+%%% code added - to deal with incomplete drawing data
+% --- Filter subjects based on vocab_test_result.csv ---
+% vocab_file = fullfile('../data_analysis/vocab_test_result.csv');
+vocab_file = fullfile('../data_analysis/prolific_id_list.csv');
+if isfile(vocab_file)
+    % If file exists, filter subjects based on CSV
+    subjtbl = readtable(vocab_file);      % read CSV into table
+    valid_ids = string(subjtbl.id);       % list of allowed subject IDs (from "id" column)
+    disp("Valid IDs from csv:");
+    disp(valid_ids);
+
+    % keep only subfolders that match IDs
+    isub = [subjects(:).isdir]; 
+    subjects = subjects(isub);                           % only folders
+    subjects = subjects(~ismember({subjects.name},{'.','..'})); % remove . and ..
+    folder_names = strtrim(string({subjects.name}));     % normalize folder names
+    subjects = subjects(ismember(folder_names, valid_ids));  % keep only valid IDs
+
+    disp("Remaining valid subject folders:");
+    disp({subjects.name}');
+
+else
+    % If file is missing, proceed without filtering
+    warning('vocab_test_result.csv not found. Proceeding without subject filtering.');
+
+    % keep all valid subfolders
+    isub = [subjects(:).isdir]; 
+    subjects = subjects(isub);
+    subjects = subjects(~ismember({subjects.name},{'.','..'})); % remove . and ..
+    disp("Proceeding with all subject folders:");
+    disp({subjects.name}');
+end
+% -------------------------------------------------------
+
+% the base image used for painting (in our case only one sided since we
+% subtract values)
+base=uint8(imread('base.png'));
+base2=base(10:531,33:203,:); % single image base
+labels={'Neutral'
+'Fear'
+'Anger'
+'Disgust'
+'Sadness'
+'Happiness'
+'Surprise'
+'Anxiety'
+'Love'
+'Depression'
+'Contempt'
+'Pride'
+'Shame'
+'Jealousy'
+};
+mask=imread('mask.png');
+
+% for each subject, load data
+for s=1:length(subjects)
+    % skip dot and dotdot folders
+    if(strcmp(subjects(s).name(1),'.')) continue; end 
+
+    %% Data loading
+    % let's load the subject's answers into a variable a
+    data=load_subj([basepath '\' subjects(s).name]);
+    NC=length(data); % number of conditions
+    
+    %% Painting reconstruction
+    % 'data' now contains all mouse movements. What we need are the mouse
+    % locations while the button was pressed (i.e. during painting)
+    % Furthermore, the painting tool has a brush size. We recreate that
+    % using image filter
+    
+    for n=1:NC;
+        T=length(data(n).paint(:,2)); % number of mouse locations
+        over=zeros(size(base,1),size(base,2)); % empty matrix to reconstruct painting
+        for t=1:T
+            y=ceil(data(n).paint(t,3)+1);
+            x=ceil(data(n).paint(t,2)+1);
+            if(x<=0) x=1; end
+            if(y<=0) y=1; end
+            if(x>=900) x=900; end % hardcoded for our experiment, you need to change it if you changed layout
+            if(y>=600) y=600; end % hardcoded for our experiment, you need to change it if you changed layout
+            over(y,x)=over(y,x)+1;
+        end
+        % Simulate brush size with a gaussian disk
+        h=fspecial('gaussian',[15 15],5);
+        over=imfilter(over,h);
+
+        %%% modified: the number of pixels that both the left and right %%%%
+        %%% part are painted (both positive and negative) %%%%%%%%%%%%%%%%%
+
+        % Extract left and right areas
+        left  = over(10:531,33:203);
+        right = over(10:531,696:866);
+        
+        % Threshold for "painted"
+        th = 0;   % consider anything > 0 as painted; change if needed
+        
+        leftMask  = left  > th;
+        rightMask = right > th;
+        
+        % Pixels painted on BOTH left and right sides
+        bothMask  = leftMask & rightMask;
+        numBoth   = nnz(bothMask);   % the number you want to export
+        
+        % Store per condition
+        numBothPerCond(n) = numBoth;
+        
+        % Continue with your original subtraction
+        over2 = left - right;
+        resmat(:,:,n) = over2;
+
+        %%% modification ends %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+        % we subtract left part minus right part of painted area
+        % values are hard-coded to our web layout
+        over2=over(10:531,33:203,:)-over(10:531,696:866,:);
+        resmat(:,:,n)=over2;
+    end
+    
+    %% store result    
+    %outdir = fullfile('..\embody_matlab\preprocessed_data_addition_1104');
+    outdir = fullfile('..\embody_matlab\preprocessed_data_prolific');
+    if ~exist(outdir,'dir')
+        mkdir(outdir);
+    end
+
+    if exist('resmat','var') && ~isempty(resmat)
+        save(fullfile(outdir, [subjects(s).name '_preprocessed.mat']), 'resmat');
+    else
+        warning('resmat is empty for subject %s', subjects(s).name);
+    end
+
+    %{
+    %% visualize subject's data
+    M=max(abs(resmat(:))); % max range for colorbar
+    NumCol=64;
+    hotmap=hot(NumCol);
+    coldmap=flipud([hotmap(:,3) hotmap(:,2) hotmap(:,1) ]);
+    hotcoldmap=[
+        coldmap
+        hotmap
+    ];
+
+    % note that - for statistical maps - if you want to hide non
+    % significant values and show them as black, you need to tweak the
+    % colormap so that you have more rows of black between around the
+    % non-significant interval. 
+    % As an example if we had a threshold, uncomment the below
+    if(0)
+        th=0.2*M; % just an example threshold, since this is not a statistical map 
+        non_sig=round(th/M*NumCol); % proportion of non significant colors
+        hotmap=hot(NumCol-non_sig);
+        coldmap=flipud([hotmap(:,3) hotmap(:,2) hotmap(:,1) ]);
+        hotcoldmap=[
+            coldmap
+            zeros(2*non_sig,3);
+            hotmap
+        ];
+    end
+
+    %%% modified: save the negative and positive overlap %%%%%%%%%%%%%%%%%
+    % Save numBothPerCond as a row in a .txt file
+    txtOutDir = fullfile(outdir, 'both_sides_counts');
+    if ~exist(txtOutDir, 'dir')
+        mkdir(txtOutDir);
+    end
+    
+    % Create header (condition names)
+    header = strjoin(labels', '\t');
+    
+    % Prepare row: participant name + numbers
+    rowData = [subjects(s).name, sprintf('\t%d', numBothPerCond)];
+    
+    % Write to file
+    fid = fopen(fullfile(txtOutDir, [subjects(s).name '_bothSides.txt']), 'w');
+    fprintf(fid, '%s\n', header);
+    fprintf(fid, '%s\n', rowData);
+    fclose(fid);
+
+    %%% modification ends %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+end
+
+```
+
+The resulting preprocessed data (.mat format) was imported into Python environment, processed and visualized individually for the sanity check. 
+
+First, It was processed into a dictionary of coordinate values by each pixel.
+
+```{python}
+import scipy
+import os
+import numpy as np
+import pandas as pd
+
+labels = [
+    'Neutral', 'Fear', 'Anger', 'Disgust', 'Sadness', 'Happiness', 'Surprise'
+]
+
+raw_maps = {}  # final structure: {subject_id: {emotion_label: 2D numpy array}}
+
+basepath = '../data/final_data/drawing_data_preprocessed'
+
+files = sorted([f for f in os.listdir(basepath) if f.endswith('.mat')])
+NS = len(files)
+NC = len(labels)
+
+for s, fname in enumerate(files):
+    subject_id = fname.split('_')[0]
+
+    mat = scipy.io.loadmat(os.path.join(basepath, fname))  
+    resmat = mat['resmat']  # shape: [H, W, NC]
+
+    raw_maps[subject_id] = {}
+
+    for n in range(NC):
+        subj_map = resmat[:, :, n]
+
+        raw = np.copy(subj_map)
+
+        emotion_label = labels[n].replace(" ", "_").lower()
+        raw_maps[subject_id][emotion_label] = raw
+
+```
+
+
+```{python}
+raw_maps['P0']['fear']
+```
+
+```{python}
+len(raw_maps)
+```
+
+Then, the data was masked to ensure that pixels outside the body silhouette not to be considered for analysis (it was converted to nan values, as compared to 0 which could mean it's a valid pixel but was unpainted by the participant.)
+
+```{python}
+import matplotlib.image as mpimg
+#load the mask
+
+mask_img = mpimg.imread('../data/files_for_preprocessing/mask.png')
+
+if mask_img.ndim == 3:
+    mask_img = mask_img[..., 0]
+mask = (mask_img > 0.5).astype(np.uint8)  # uint8 for resize
+H, W = mask.shape
+print(f"Original mask size: {H}×{W}, valid pixels: {mask.sum()}")
+
+#resize the mask
+# Get size from one of the raw maps
+any_subj = next(iter(raw_maps))
+any_emo = next(iter(raw_maps[any_subj]))
+H_raw, W_raw = raw_maps[any_subj][any_emo].shape
+
+H_mask, W_mask= H, W
+
+# Resize mask if dimensions do NOT match
+if (H_mask, W_mask) != (H_raw, W_raw):
+    mask_resized = cv2.resize(
+        mask.astype(float),
+        (W_raw, H_raw),
+        interpolation=cv2.INTER_NEAREST
+    )
+    mask_resized = (mask_resized > 0.5).astype(np.uint8)
+else:
+    mask_resized = mask
+# filter out datapoints outside the body using the mask
+masked_maps = {}    # {subject: {emotion: 2D masked array}}
+
+for subj in raw_maps:
+    masked_maps[subj] = {}
+    for emo in raw_maps[subj]:
+        img = raw_maps[subj][emo]
+        masked = np.where(mask_resized == 1, img, np.nan)
+        masked_maps[subj][emo] = masked
+
+```
+
+
+```{python}
+masked_maps['P0']['fear']
+```
+
+for sanity check, the number of NAN values were counted, which should match the number 38898=522*121-50364.
+
+```{python}
+np.count_nonzero(np.isnan(masked_maps['P0']['fear']))==38898
+```
+
+Lastly, each participant's BSMs were visualized and stored as separate file for manual inspection.
+
+```{python}
+#| eval: false
+import os
+import math
+import numpy as np
+import scipy.io
+import matplotlib.pyplot as plt
+from matplotlib.colors import ListedColormap
+import matplotlib.cm as cm
+import matplotlib.gridspec as gridspec
+import matplotlib.image as mpimg
+from skimage.transform import resize
+
+
+# -----------------------------------------------------
+# Load base silhouette & mask
+# -----------------------------------------------------
+base = mpimg.imread('../data/files_for_preprocessing/base.png')
+mask = mpimg.imread('../data/files_for_preprocessing/mask.png')
+
+# Correct MATLAB → Python crop
+base2 = base[10:532, 33:204, :]     # (H_base, W_base, 3)
+
+# Normalize mask
+mask_f = mask.astype(float)
+if mask_f.max() > 1:
+    mask_f /= 255.0
+if mask_f.ndim == 3:
+    mask_f = mask_f[:, :, 0]
+# -----------------------------------------------------
+# Pre-compute target map size from first subject
+# -----------------------------------------------------
+first_subj = list(raw_maps.keys())[0]
+H_map, W_map = raw_maps[first_subj][labels[0].lower()].shape
+H_base, W_base = base2.shape[:2]
+
+if (H_map, W_map) != (H_base, W_base):
+    raise ValueError(
+        f"Raw map size {H_map}×{W_map} does not match silhouette {H_base}×{W_base}."
+    )
+
+# -----------------------------------------------------
+# Build custom diverging LUT
+# -----------------------------------------------------
+NumCol = 64
+hot = cm.hot(np.linspace(0, 1, NumCol))[:, :3]
+cold = np.flipud(hot[:, ::-1])
+neutral = np.zeros((2 * round(NumCol * 0.05), 3))
+lut = np.vstack([cold, neutral, hot])
+final_cmap = ListedColormap(lut)
+
+
+# -----------------------------------------------------
+# === LOOP OVER ALL PARTICIPANTS ===
+# -----------------------------------------------------
+output_dir = "participant_visualizations"
+os.makedirs(output_dir, exist_ok=True)
+
+for subject_id in raw_maps.keys():
+    print(f"Rendering subject {subject_id} ...")
+
+    emotion_keys = list(raw_maps[subject_id].keys())
+
+    # Compute symmetric color bound for THIS subject
+    all_vals = np.hstack([raw_maps[subject_id][emo].ravel() for emo in emotion_keys])
+    M = np.max(np.abs(all_vals))
+
+    # Prepare grid
+    ncols = 7
+    nrows = math.ceil(NC / ncols)
+
+    fig = plt.figure(figsize=(2.5 * ncols + 2, 2.5 * nrows))
+    gs = gridspec.GridSpec(
+        nrows, ncols + 1,
+        width_ratios=[1] * ncols + [0.18],
+        wspace=0.05, hspace=0.25
+    )
+
+    # --------------------------------------------------
+    # Plot each emotion
+    # --------------------------------------------------
+    for idx, emo in enumerate(emotion_keys):
+        row = idx // ncols
+        col = idx % ncols
+        ax = fig.add_subplot(gs[row, col])
+
+        ax.imshow(base2, zorder=0)
+
+        data = raw_maps[subject_id][emo]
+        normed = np.clip((data + M) / (2 * M), 0, 1)
+
+        rgba = final_cmap(normed)
+        rgba[..., 3] = mask_f      # mask-aware alpha
+
+        ax.imshow(rgba, interpolation='nearest', zorder=1)
+        ax.set_title(emo, fontsize=9)
+        ax.axis('off')
+
+    # Empty cells
+    for idx in range(NC, nrows * ncols):
+        fig.add_subplot(gs[idx // ncols, idx % ncols]).axis('off')
+
+    # Colorbar
+    cax = fig.add_subplot(gs[:, -1])
+    sm = plt.cm.ScalarMappable(
+        cmap=final_cmap,
+        norm=plt.Normalize(vmin=-M, vmax=M)
+    )
+    sm.set_array([])
+    plt.colorbar(sm, cax=cax)
+    cax.set_ylabel("Intensity", rotation=270, labelpad=12)
+
+    # Title
+    fig.suptitle(f"Emotion Body Maps (Subject {subject_id})", fontsize=18)
+    fig.subplots_adjust(top=0.8)
+
+    # Save figure
+    out_path = os.path.join(output_dir, f"{subject_id}_bsm.png")
+    plt.savefig(out_path, dpi=200, bbox_inches='tight')
+    plt.close(fig)
+
+print("Done! All participant maps rendered.")
+
+```
+
+Participants in 'final_data_exclusion_list.csv' were excluded from the final analysis, as identified according to the criteria listed above.
+
+```{python}
+exclusion= pd.read_csv('../data/files_for_preprocessing/final_data_exclusion_list.csv')
+exclusion_list= exclusion.userID.tolist()
+
+for s, fname in enumerate(files):
+    subject_id = fname.split('_')[0]
+
+    if subject_id in exclusion_list:
+        del masked_maps[subject_id]
+
+```
+
+```{python}
+len(masked_maps)
+
+```
+
+The final sample consists of 29 participants (Mean age: 41.23, SD= 12.28, 54.84% Female). Participants were mapped into different cultural groups, which identified 16 Korean speakers and 13 English speakers from the U.S. 
+```{python}
+survey['userID'] = survey['userID'].astype(str)
+survey['age'] = pd.to_numeric(survey['age'], errors='coerce')
+survey['gender'] = survey['gender'].astype('category')
+
+data_filtered = survey[~survey['userID'].isin(exclusion_list)]
+
+age_mean = data_filtered['age'].mean()
+age_sd = data_filtered['age'].std()
+gender_percent = data_filtered['gender'].value_counts(normalize=True) * 100
+
+print("Mean age:", age_mean)
+print("SD age:", age_sd)
+print("\nGender percentage:\n", gender_percent)
+
+```
+
+```{python}
+import pandas as pd
+import math
+
+# Load metadata
+df = pd.read_csv(
+    "../data/final_data/survey/Bodymap_consent_language_history_prolific_id_corrected.csv"
+)
+
+# Convert language codes → labels
+lang_map = {1: "Korean", 2: "English"}
+df["language_label"] = df["language_Kor"].map(lang_map)
+
+# Build lookup: userjID → language_label, skipping NaN IDs
+culture_lookup = {}
+for sid, lang in zip(df["userID"], df["language_label"]):
+    # skip missing / empty IDs
+    if pd.isna(sid):
+        continue
+    sid_str = str(sid)
+    culture_lookup[sid_str] = lang
+
+# Get participant IDs directly from masked_maps
+mat_ids = list(masked_maps.keys())   # e.g., ["P0", "P1", "ABC25", ...]
+
+mat_ids_set = set(mat_ids)
+csv_ids_set = set(culture_lookup.keys())
+
+# Validation (non-fatal)
+extra_in_mat = mat_ids_set - csv_ids_set       # present in masked_maps but not CSV
+
+if extra_in_mat:
+    print("⚠️ WARNING: IDs in masked_maps NOT found in CSV:", extra_in_mat)
+
+# Build culture list in the *same order* as masked_maps keys
+culture_list = []
+for sid in mat_ids:
+    if sid not in culture_lookup:
+        print(f"⚠️ WARNING: ID {sid} not in CSV or was NaN → assigning None")
+        culture_list.append(None)
+    else:
+        culture_list.append(culture_lookup[sid])
+
+# Show aligned output
+print("\nAligned culture list:")
+for sid, c in zip(mat_ids, culture_list):
+    print(f"{sid}  →  {c}")
+
+```
+
+The average body maps across all participants, as well as for each cultural group, were visualized. The general trend seems like much less pixels were colored than the original paper. When averaged emotion maps from each cultures were compared, there seem to have some differences in which body parts are colored more or less across the cultures for some emotion categories (e.g. disgust, sadness, and surprise.)
+
+```{python}
+import numpy as np
+
+# Emotion keys in masked_maps (same logic as before)
+emotion_keys = [lab.replace(" ", "_").lower() for lab in labels]  # e.g. 'Neutral'→'neutral'
+
+# All subjects in masked_maps (already excluded via your exclusion list)
+subject_ids = sorted(masked_maps.keys())
+
+# Split by language
+korean_ids = [sid for sid in subject_ids if culture_lookup.get(sid) == "Korean"]
+english_ids = [sid for sid in subject_ids if culture_lookup.get(sid) == "English"]
+
+print("Total subjects:", len(subject_ids))
+print("Korean subjects:", len(korean_ids))
+print("English subjects:", len(english_ids))
+
+# Get spatial size from any subject × emotion
+first_subj = subject_ids[0]
+H, W = masked_maps[first_subj][emotion_keys[0]].shape
+NC = len(emotion_keys)
+
+def compute_group_average(subj_list):
+    """
+    subj_list: list of subject IDs in this group.
+    Returns:
+        avg_maps: {emotion_key: 2D array (H, W)} where each value is
+                  the NaN-aware mean across participants.
+    """
+    if len(subj_list) == 0:
+        return None
+    
+    avg_maps = {}
+    for emo in emotion_keys:
+        # Stack maps across participants: shape (NS_group, H, W)
+        stack = []
+        for sid in subj_list:
+            stack.append(masked_maps[sid][emo])
+        stack = np.stack(stack, axis=0)  # (NS_group, H, W)
+        
+        # NaN-aware mean across subjects
+        avg = np.nanmean(stack, axis=0)  # (H, W)
+        avg_maps[emo] = avg
+    
+    return avg_maps
+
+avg_all = compute_group_average(subject_ids)
+avg_kor = compute_group_average(korean_ids)
+avg_eng = compute_group_average(english_ids)
+
+```
+
+```{python}
+import os
+import math
+import matplotlib.pyplot as plt
+import matplotlib.cm as cm
+from matplotlib.colors import ListedColormap
+import matplotlib.gridspec as gridspec
+import matplotlib.image as mpimg
+import numpy as np
+
+# -----------------------------------------------------
+# Load base silhouette & mask
+# -----------------------------------------------------
+base = mpimg.imread('../data/files_for_preprocessing/base.png')
+mask = mpimg.imread('../data/files_for_preprocessing/mask.png')
+
+# Crop base exactly as you did before
+base2 = base[10:532, 33:204, :]     # (H_base, W_base, 3)
+
+# Normalize mask
+mask_f = mask.astype(float)
+if mask_f.max() > 1:
+    mask_f /= 255.0
+if mask_f.ndim == 3:
+    mask_f = mask_f[:, :, 0]
+
+H_base, W_base = base2.shape[:2]
+assert (H, W) == (H_base, W_base), f"Map size {H}×{W} != silhouette {H_base}×{W_base}"
+
+# -----------------------------------------------------
+# Build custom diverging LUT (same as your code)
+# -----------------------------------------------------
+NumCol = 64
+hot = cm.hot(np.linspace(0, 1, NumCol))[:, :3]
+cold = np.flipud(hot[:, ::-1])
+neutral = np.zeros((2 * round(NumCol * 0.05), 3))
+lut = np.vstack([cold, neutral, hot])
+final_cmap = ListedColormap(lut)
+
+pretty_labels = labels  
+
+# -----------------------------------------------------
+# Helper: plot average maps for one group
+# -----------------------------------------------------
+def plot_group_averages(avg_maps, group_label, output_dir="group_averaged_maps"):
+    """
+    avg_maps: {emotion_key: 2D array (H, W)} as returned by compute_group_average
+    group_label: 'All', 'Korean', 'English', etc.
+    """
+    if avg_maps is None:
+        print(f"No participants in group {group_label}, skipping.")
+        return
+
+    os.makedirs(output_dir, exist_ok=True)
+
+    # Collect all values to define a symmetric color range
+    all_vals_list = []
+    for emo in emotion_keys:
+        arr = avg_maps[emo]
+        all_vals_list.append(arr.ravel())
+    all_vals = np.concatenate(all_vals_list)
+    all_vals = all_vals[~np.isnan(all_vals)]
+
+    if all_vals.size == 0:
+        print(f"No valid data in group {group_label}.")
+        return
+
+    M = np.max(np.abs(all_vals))  # symmetric bound: [-M, M]
+
+    ncols = 7
+    nrows = math.ceil(NC / ncols)
+
+    fig = plt.figure(figsize=(2.5 * ncols + 2, 2.5 * nrows))
+    gs = gridspec.GridSpec(
+        nrows, ncols + 1,
+        width_ratios=[1] * ncols + [0.18],
+        wspace=0.05, hspace=0.25
+    )
+
+    # Plot each emotion
+    for idx, emo in enumerate(emotion_keys):
+        row = idx // ncols
+        col = idx % ncols
+        ax = fig.add_subplot(gs[row, col])
+
+        ax.imshow(base2, zorder=0)
+
+        data = avg_maps[emo]  # averaged raw values (H, W)
+
+        # Normalize to [0,1] for LUT
+        normed = (data + M) / (2 * M)
+        normed = np.clip(normed, 0, 1)
+
+        rgba = final_cmap(normed)
+        rgba[..., 3] = mask_f   # alpha from mask
+
+        ax.imshow(rgba, interpolation='nearest', zorder=1)
+        ax.set_title(pretty_labels[idx], fontsize=9)
+        ax.axis('off')
+
+    # Empty cells if NC < nrows * ncols
+    for idx in range(NC, nrows * ncols):
+        fig.add_subplot(gs[idx // ncols, idx % ncols]).axis('off')
+
+    # Colorbar
+    cax = fig.add_subplot(gs[:, -1])
+    sm = plt.cm.ScalarMappable(
+        cmap=final_cmap,
+        norm=plt.Normalize(vmin=-M, vmax=M)
+    )
+    sm.set_array([])
+    plt.colorbar(sm, cax=cax)
+    cax.set_ylabel("Mean intensity (raw units)", rotation=270, labelpad=12)
+
+    # Title
+    fig.suptitle(f"Average Emotion Body Maps ({group_label})", fontsize=18)
+    fig.subplots_adjust(top=0.8)
+
+    # Save
+    out_path = os.path.join(output_dir, f"{group_label}_avg_maps.png")
+    plt.savefig(out_path, dpi=200, bbox_inches='tight')
+    plt.show()
+    print(f"Saved {group_label} average maps to:", out_path)
+
+# -----------------------------------------------------
+# Make figures for All / Korean / English
+# -----------------------------------------------------
+plot_group_averages(avg_all, "All")
+plot_group_averages(avg_kor, "Korean")
+plot_group_averages(avg_eng, "English")
+
+print("Done! Group-averaged raw maps rendered.")
+
+```
+
+![BSMs of basic emotions reported in the original paper](../original_paper/fig2_basic_emotions.jpg)
+
+### Confirmatory Analysis
+For confirmatory analysis, pixel-wise Spearman correlations will be computed. First, list of of all possible pairs of two participants were collected. Then, for each pair of participants, correlations of the BSMs of all possible pairs of mismatched emotions (for example, sadness and anger) and matched emotions (for example, sadness and sadness) were computed and stored. Here, the correlations are computed only among valid pixels, which means that the 'masked' coordinates were used for analysis. Moreover, for uncolored pixels within the body silhouette, Gaussian noise were filled instead of 0 values to prevent inflating the correlations.
+
+```{python}
+# apply Gaussian noise - except for the masked area
+
+processed_maps = {}   # {subject: {emotion: 1D vector}}
+noise_std = 1e-6
+
+for subj in masked_maps:
+    processed_maps[subj] = {}
+
+    for emo in masked_maps[subj]:
+        
+        img = masked_maps[subj][emo]   # 2D masked map with NaNs
+        img2 = img.copy()
+
+        # Only replace ZERO values that are NOT NaN
+        zero_mask = (img2 == 0) & (~np.isnan(img2))
+
+        # Generate noise only where needed
+        img2[zero_mask] = np.random.normal(0, noise_std, size=np.sum(zero_mask))
+
+        # Flatten for correlation (NaNs preserved)
+        processed_maps[subj][emo] = img2.reshape(-1)
+        
+#get the list of subject pairs
+from itertools import combinations
+
+subject_pairs = list(combinations(subject_ids, 2))  
+print("Number of unique subject pairs:", len(subject_pairs))
+
+```
+
+```{python}
+import os
+import pandas as pd
+from scipy.stats import spearmanr
+import numpy as np
+
+output_path = "../data/final_data/analysis_results/final_data_correlations_after_exclusion.csv"
+
+# 1. INITIALIZE pair_rows (depending on what's available)
+
+# Case A: pair_rows is already in memory
+if "pair_rows" in globals() and isinstance(pair_rows, list):
+    print(f"pair_rows already exists in memory with {len(pair_rows)} rows.")
+    in_memory = True
+
+# Case B: no pair_rows but CSV exists → load progress
+elif os.path.exists(output_path):
+    print(f"Loading previous progress from {output_path} ...")
+    df_prev = pd.read_csv(output_path)
+    pair_rows = df_prev.to_dict("records")
+    print(f"Loaded {len(pair_rows)} previously computed rows.")
+    in_memory = False
+
+# Case C: no pair_rows and no CSV → start fresh
+else:
+    print("No existing progress found. Initializing empty pair_rows.")
+    pair_rows = []
+    in_memory = False
+
+
+# 2. BUILD SKIP SET FROM EXISTING pair_rows
+
+done_keys = set(
+    (row["subj_i"], row["subj_j"], row["emotion1"], row["emotion2"])
+    for row in pair_rows
+)
+
+print(f"Resuming computation with {len(done_keys)} correlations already completed.")
+
+# 3. MAIN LOOP — masked correlations using existing NaNs
+
+n_pair = 0
+n_new = 0
+SAVE_INTERVAL = 30
+total_pairs = len(subject_pairs)
+
+for subj_i, subj_j in subject_pairs:
+    n_pair += 1
+
+    culture_i = culture_lookup[str(subj_i)]
+    culture_j = culture_lookup[str(subj_j)]
+    same_culture = (culture_i == culture_j)
+
+    for e1 in labels:
+        e1 = e1.lower()
+        vec_i = processed_maps[subj_i][e1]    # flattened, contains NaNs
+
+        for e2 in labels:
+            e2 = e2.lower()
+            vec_j = processed_maps[subj_j][e2]
+
+            key = (subj_i, subj_j, e1, e2)
+
+            if key in done_keys:
+                continue
+
+            valid = ~np.isnan(vec_i) & ~np.isnan(vec_j)
+
+            rho, _ = spearmanr(vec_i[valid], vec_j[valid])
+
+            pair_rows.append({
+                "pair_subj": (subj_i, subj_j),
+                "pair_emo": (e1, e2),
+                "subj_i": subj_i,
+                "subj_j": subj_j,
+                "emotion1": e1,
+                "emotion2": e2,
+                "matched": (e1 == e2),
+                "same_culture": same_culture,
+                "rho": rho
+            })
+
+            done_keys.add(key)
+            n_new += 1
+
+    if n_pair % SAVE_INTERVAL == 0:
+        print(f"[Autosave] Processed {n_pair}/{total_pairs} subject pairs "
+              f"(+{n_new} new correlations).")
+
+        pd.DataFrame(pair_rows).to_csv(output_path, index=False)
+        print(f"Saved to {output_path}")
+
+        n_new = 0
+
+# FINAL SAVE
+df_final = pd.DataFrame(pair_rows)
+df_final.to_csv(output_path, index=False)
+
+print("\n===============================================")
+print(f"Final save complete.")
+print(f"Total correlations: {len(df_final)}")
+print(f"Saved to: {output_path}")
+print("===============================================")
+
+df_final.head()
+```
+
+Results for the full sample (before exclusion) were also calculated using the same code above, and stored as a separate csv file. This result will also be loaded for comparison.
+
+```{python}
+import pandas as pd
+output_path = "../data/final_data/analysis_results/final_data_correlations_all.csv"
+df_final_full= pd.read_csv(output_path)
+df_final_full['pair_subj'].map(type).value_counts()
+
+```
+
+Then, the correlation values of matching vs non-matching emotion pairs were calculated and averaged for cross-cultural pairs. The correlation values were very low, close to zero. This trend was observed when using the full sample without exclusion as well .
+
+```{python}
+# filtered participants
+cross_df = df_final[df_final["same_culture"] == False].copy()
+
+matched   = cross_df[cross_df["matched"] == True]["rho"]
+mismatched = cross_df[cross_df["matched"] == False]["rho"]
+
+print("Final sample after exclusion: ")
+print(f"Matched count: {len(matched)}, mean = {matched.mean():.3f}, SD = {matched.std():.3f}")
+print(f"Mismatched count: {len(mismatched)}, SD = {mismatched.std():.3f}")
+
+```
+
+```{python}
+# full data
+cross_df = df_final_full[df_final_full["same_culture"] == False].copy()
+
+matched   = cross_df[cross_df["matched"] == True]["rho"]
+mismatched = cross_df[cross_df["matched"] == False]["rho"]
+
+print("Full sample before exclusion: ")
+print(f"Matched count: {len(matched)}, mean = {matched.mean():.3f}, SD = {matched.std():.3f}")
+print(f"Mismatched count: {len(mismatched)}, SD = {mismatched.std():.3f}")
+
+```
+
+### Exploratory Analysis
+
+For additional exploration, I also compared the within-cultural pairs' correlation values averaged across all possible matching emotion pairs vs non-matching emotion pairs. Similarly, the correlation values were very low, close to zero.
+
+```{python}
+# filtered participants
+within_df = df_final[df_final["same_culture"] == True].copy()
+
+matched   = within_df[within_df["matched"] == True]["rho"]
+mismatched = within_df[within_df["matched"] == False]["rho"]
+
+print("Final sample after exclusion: ")
+print(f"Matched count: {len(matched)}, mean = {matched.mean():.3f}, SD = {matched.std():.3f}")
+print(f"Mismatched count: {len(mismatched)}, SD = {mismatched.std():.3f}")
+```
+
+```{python}
+# filtered participants
+within_df = df_final_full[df_final_full["same_culture"] == True].copy()
+
+matched   = within_df[within_df["matched"] == True]["rho"]
+mismatched = within_df[within_df["matched"] == False]["rho"]
+
+print("Full sample before exclusion: ")
+print(f"Matched count: {len(matched)}, mean = {matched.mean():.3f}, SD = {matched.std():.3f}")
+print(f"Mismatched count: {len(mismatched)}, SD = {mismatched.std():.3f}")
+```
+
+Moreover, The distribution of correlation values in each condition was calculated. The result suggested a large variance of correlation values across all conditions, resembling normal distributions, with the sample mean being very close to zero.
+
+```{python}
+import matplotlib.pyplot as plt
+
+# Make sure rho is numeric
+df_final["rho"] = pd.to_numeric(df_final["rho"], errors="coerce")
+
+conditions = [
+    (True,  True,  "matched = True,  same_culture = True"),
+    (True,  False, "matched = True,  same_culture = False"),
+    (False, True,  "matched = False, same_culture = True"),
+    (False, False, "matched = False, same_culture = False"),
+]
+
+for matched_val, same_cult_val, title in conditions:
+    subset = df_final[
+        (df_final["matched"] == matched_val) &
+        (df_final["same_culture"] == same_cult_val)
+    ]["rho"].dropna()
+
+    plt.figure()
+    plt.hist(subset, bins=30)
+    plt.title(title)
+    plt.xlabel("Spearman r")
+    plt.ylabel("Count")
+    plt.tight_layout()
+
+    plt.savefig('plot.png')
+
+    plt.show()
+
+   
+```
+
+
+## Discussion
+
+### Summary of Replication Attempt
+
+The confimatory analysis showed close-to-zero mean correlation values in both of the conditions (*r*=0.044 for different culture same emotion condition, and *r*=0.028 for different culture different emotion condition). The values themselves are very different from the correlations reported in the original study (*r*=0.7 for different culture same emotion condition, and *r*=0.4), nor the difference between the two conditions are significant enough to require a statistical test. Therefore, we failed to replicate the original result.
+
+### Exploratory Analysis
+We conducted to exploratory analysis. First, calculated mean correlation values for within culture condition to compare the correlation differences across between-and within-culture conditions. However, the two conditions also showed close-to-zero mean correlation values (*r*=0.042 for same culture same emotion condition, and *r*=0.027 for same culture different emotion condition). The differences between the two conditions are also not significant enough to require a statistical test. 
+
+Second, we also examined the distribution of correlation values across four conditions. All of the correlation showed wide range of variations with normal-like distribution and most of the values being close to zero. 
+
+### Commentary
+
+These results, altogether, could suggest more emotionwise/participantwise variations in this data sample to the original sample. Indeed, the visualization of BSMs suggest some possible cross-cultural differences for emotions like disgust, sadness, and surprise. Another possibility is that this replication attempt might have ommitted some procedures in processing the data for the main analyses, as the methods for the particular experiment we attempted to replicate (experiment 1c) was described vaguely and quite short in the original paper.
+
+## Statement of Contributions
+Yoonwon Jung contributed to Conceptualization, Data Curation, Formal Analysis, Investigation, Methodology, Project Administration, Software, Supervision, Validation, Visualization, Writing-original draft, and Writing-review&editing. Benjamin Bergen contributed to Resources by providing a lab server for the online hosting of the paradigm and the data storage. Bria Long contributed to funding acquisition by offering financial support to recruit prolific participants as part of the PSYC201A class.
+
+## Reference
+- Barrett, L. F., & Lindquist, K. A. (2008). The embodiment of emotion. Embodied grounding: Social, cognitive, affective, and neuroscientific approaches, 237-262.
+- Damasio, A., & Carvalho, G. B. (2013). The nature of feelings: evolutionary and neurobiological origins. Nature Reviews Neuroscience, 14(2), 143-152.
+- Marian, V., Blumenfeld, H. K., & Kaushanskaya, M. (2007). The Language Experience and Proficiency Questionnaire (LEAP-Q): Assessing Language Profiles in Bilinguals and Multilinguals. Journal of Speech, Language, and Hearing Research, 50(4), 940–967. https://doi.org/10.1044/1092-4388(2007/067)
+- Nummenmaa, L., Glerean, E., Hari, R., & Hietanen, J. K. (2014). Bodily maps of emotions. Proceedings of the National Academy of Sciences, 111(2), 646-651.
+- Volynets, S., Glerean, E., Hietanen, J. K., Hari, R., & Nummenmaa, L. (2020). Bodily maps of emotions are culturally universal. Emotion, 20(7), 1127.

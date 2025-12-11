@@ -1,0 +1,2 @@
+Neutral	Fear	Anger	Disgust	Sadness	Happiness	Surprise	Anxiety	Love	Depression	Contempt	Pride	Shame	Jealousy
+672ceecd4b982fd2123fa32f	2878	6885	16455	4210	3863	9276	3833
